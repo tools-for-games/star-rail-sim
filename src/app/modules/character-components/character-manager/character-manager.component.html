@@ -1,0 +1,12 @@
+<div class="content-layout">
+    <character-icon *ngFor="let build of characters$ | async" [character]="build.character"
+        [highlight]="(selected$ | async)?.character?.name === build?.character?.name"
+        (click)="selectCharacter(build)" />
+    <div class="add-item" (click)="characterSelectorIsVisible = true">
+        <span class="material-icons">
+            add
+        </span>
+    </div>
+</div>
+
+<character-selector [(isVisible)]="characterSelectorIsVisible" />

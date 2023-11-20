@@ -1,0 +1,50 @@
+@import "_reset.less";
+@import "_variables.less";
+@import "./components/_button.less";
+
+//@import "~ng-zorro-antd/ng-zorro-antd.less";
+@import "~ng-zorro-antd/ng-zorro-antd.dark.less";
+//@import "~ng-zorro-antd/ng-zorro-antd.compact.less";
+@import "_ant.less";
+
+@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+html,
+body {
+  min-height: 100vh;
+
+  background-color: @color-background;
+  color: @color-foreground;
+
+  font-family: @font-family-default;
+  font-weight: @font-regular;
+  font-size: @font-size-default;
+}
+
+.background-muted {
+  background-color: @color-background-muted;
+}
+
+.background-default {
+  background-color: @color-background;
+}
+
+.bold {
+  font-weight: @font-bold;
+}
+
+.font-large {
+  font-size: @font-size-large
+}
+
+.font-small {
+  font-size: @font-size-small;
+}
+
+.font-thin {
+  font-weight: @font-thin;
+}
+
+img {
+  width: 100%;
+}

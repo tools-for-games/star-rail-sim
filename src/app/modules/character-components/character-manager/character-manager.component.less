@@ -1,0 +1,42 @@
+@import "../../../styles/_variables.less";
+
+.content-layout {
+    display: grid;
+    gap: .5rem;
+}
+
+.item-base {
+    display: grid;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &:hover {
+        filter: brightness(1.2);
+        background-color: mix(@color-foreground, @color-background-muted, 10%);
+    }
+}
+
+.item {
+    .item-base();
+
+    img {
+        border-radius: 50%;
+        height: auto;
+        width: 100%;
+    }
+
+    &.selected {
+        cursor: unset;
+        border: 2px solid @color-foreground;   
+    }
+}
+
+.add-item {
+    .item-base();
+    border: 1px solid @color-foreground;    
+}

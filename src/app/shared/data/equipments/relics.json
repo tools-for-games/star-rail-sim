@@ -1,0 +1,146 @@
+[
+    {
+        "icon": "band_of_sizzling_thunder.webp",
+        "name": "Band of Sizzling Thunder",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Lightning DMG by 10%.",
+            "(4) When the wearer uses Skill, increases the wearer's ATK by 20% for 1 turn(s)."
+        ]
+    },
+    {
+        "icon": "champion_of_streetwise_boxing.webp",
+        "name": "Champion of Streetwise Boxing",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Physical DMG by 10%.",
+            "(4) After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s)."
+        ]
+    },
+    {
+        "icon": "eagle_of_twilight_line.webp",
+        "name": "Eagle of Twilight Line",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Wind DMG by 10%.",
+            "(4) After the wearer uses Ultimate, their action is Advanced Forward by 25%."
+        ]
+    },
+    {
+        "icon": "firesmith_of_lava.webp",
+        "name": "Firesmith of Lava-Forging",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Fire DMG by 10%.",
+            "(4) Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for next attack."
+        ]
+    },
+    {
+        "icon": "genius_of_brilliant_stars.webp",
+        "name": "Genius of Brilliant Stars",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Quantum DMG by 10%.",
+            "(4) When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF."
+        ]
+    },
+    {
+        "icon": "guard_of_wuthering_snow.webp",
+        "name": "Guard of Wuthering Snow",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Reduces DMG taken by 8%.",
+            "(4) At the beginning of the turn, if the wearer's HP is equal to or less than 50% of their Max HP, restores HP equal to 8% of their Max HP and regenerates 5 Energy."
+        ]
+    },
+    {
+        "icon": "hunter_of_glacial_forest.webp",
+        "name": "Hunter of Glacial Forest",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Ice DMG by 10%.",
+            "(4) After the wearer unleashes their Ultimate, their CRIT DMG increases by 25% for 2 turn(s)."
+        ]
+    },
+    {
+        "icon": "knight_of_purity_palace.webp",
+        "name": "Knight of Purity Palace",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases DEF by 15%.",
+            "(4) Increases the max DMG that can be absorbed by the shield created by the wearer by 20%."
+        ]
+    },
+    {
+        "icon": "longevous_disciple.webp",
+        "name": "Longevous Disciple",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Max HP by 12%.",
+            "(4) When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks."
+        ]
+    },
+    {
+        "icon": "messenger_traversing_hackerspace.webp",
+        "name": "Messenger Traversing Hackerspace",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases SPD by 6%.",
+            "(4) When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked."
+        ]
+    },
+    {
+        "icon": "musketeer_of_wild_wheat.webp",
+        "name": "Musketeer of Wild Wheat",
+        "type": "RelicSet",
+        "effect": [
+            "(2) ATK increases by 12%.",
+            "(4) The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%."
+        ]
+    },
+    {
+        "icon": "passerby_of_wandering_cloud.webp",
+        "name": "Passerby of Wandering Cloud",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Outgoing Healing by 10%.",
+            "(4) At the beginning of the battle, immediately recovers 1 Skill Point."
+        ]
+    },
+    {
+        "icon": "prisoner_in_deep_confinement.webp",
+        "name": "Prisoner in Deep Confinement",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases ATK by 12%.",
+            "(4) For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs."
+        ]
+    },
+    {
+        "icon": "the_ashblazing_grand_duke.webp",
+        "name": "The Ashblazing Grand Duke",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases follow-up attack DMG by 20%.",
+            "(4) When the wearer uses follow-up attacks against the target enemy, increase the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack for a maximum of 8 times and lasts for 3 turns. This effect is removed the next time the wearer uses a follow-up attack."
+        ]
+    },
+    {
+        "icon": "thief_of_shooting_meteor.webp",
+        "name": "Thief of Shooting Meteor",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Break Effect by 16%",
+            "(4) Increases the wearer's Break Effect by 16%. When the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy."
+        ]
+    },
+    {
+        "icon": "wastelander_of_banditry_desert.webp",
+        "name": "Wastelander of Banditry Desert",
+        "type": "RelicSet",
+        "effect": [
+            "(2) Increases Imaginary DMG by 10%.",
+            "(4) When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies."
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+@import "../../../styles/_variables.less";
+
+.container {
+    background-color: @color-background-muted;
+    padding: 1em;
+    display: grid;
+    gap: 1em;
+}
+
+.stat-container {
+    min-width: 20rem;
+    > div {
+        padding: 0.2em 0.5em;
+        &:nth-child(odd) {
+            background-color: mix(@color-foreground, @color-background-muted, @lighten-mix-value)
+        }
+    }
+}
+
+.item-value-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1em;
+}

@@ -1,0 +1,28 @@
+@lighten-mix-value: 7%;
+@border-radius-default: 7px;
+
+// colors
+@color-primary: #150050;
+@color-danger: #f83c3c;
+@color-success: #2cc311;
+
+@star_rail_selected: #f7b336;
+
+@color-foreground: #ffffff;
+@color-background: #131313;
+
+@color-background-muted: mix(@color-foreground, @color-background, @lighten-mix-value);
+
+@color-background-highlight: mix(@color-foreground, transparent, @lighten-mix-value);
+@color-background-highlight-2x: mix(@color-foreground, transparent, @lighten-mix-value * 2);
+
+// font
+@font-family-default: 'Montserrat', sans-serif;
+
+@font-bold: 500;
+@font-regular: 400;
+@font-thin: 300;
+
+@font-size-large: 20px;
+@font-size-default: 16px;
+@font-size-small: 14px;

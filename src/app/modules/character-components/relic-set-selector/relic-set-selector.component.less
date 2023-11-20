@@ -1,0 +1,41 @@
+@import "../../../styles/_variables.less";
+
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+.equipment-selector-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.equipment-item {
+    display: grid;
+    grid-template-columns: 55px auto;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    
+    border: 2px solid transparent;
+    
+    border-radius: @border-radius-default;
+    background-color: @color-background-highlight;
+
+    &.selected {
+        border: 2px solid @star_rail_selected;
+    }
+
+    &.disabled:not(.selected) {
+        filter: grayscale(100%);
+        cursor: unset;
+    }
+
+    &:not(.disabled):hover,
+    &:not(.disabled):focus {
+        filter: brightness(1.2);
+        background-color: @color-background-highlight-2x;
+    }
+}

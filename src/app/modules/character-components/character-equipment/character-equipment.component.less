@@ -1,0 +1,45 @@
+@import "../../../styles/_variables.less";
+
+.container {
+    background-color: @color-background-muted;
+    padding: 1rem;
+    display: grid;
+    gap: 1em;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+}
+
+.equipment-set-layout {
+    display: grid;
+}
+
+.equipment-piece-selector {
+    display: flex;
+    gap: .5em;
+}
+
+.popover-container {
+    display: grid;
+    gap: 1rem;
+
+    max-height: 650px;
+    max-width: 750px;
+    overflow-y: scroll;
+    padding-right: 1em;
+}
+
+.equipment-item {
+    display: grid;
+    grid-template-columns: 55px auto;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+}
+
+.equipment-icon {
+    width: 70%;
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "icon": "belobog_of_the_architects.webp",
+        "name": "Belobog of the Architects",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF."]
+    },
+    {
+        "icon": "broken_keel.webp",
+        "name": "Broken Keel",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%."]
+    },
+    {
+        "icon": "celestial_differentiator.webp",
+        "name": "Celestial Differentiator",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's CRIT DMG by 16%. When the wearer's current CRIT DMG reaches 120% or higher, after entering battle, the wearer's CRIT Rate increases by 60% until the end of their first attack."]
+    },
+    {
+        "icon": "firmament_frontline_glamoth.webp",
+        "name": "Firmament Frontline: Glamoth",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG."]
+    },
+    {
+        "icon": "fleet_of_the_ageless.webp",
+        "name": "Fleet of the Ageless",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%."]
+    },
+    {
+        "icon": "inert_salsotto.webp",
+        "name": "Inert Salsotto",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the wearer's Ultimate and follow-up attack DMG increases by 15%."]
+    },
+    {
+        "icon": "pan_cosmic_commercial_enterprise.webp",
+        "name": "Pan-Cosmic Commercial Enterprise",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's Effect Hit Rate by 10%. Meanwhile, the wearer's ATK increases by an amount that is equal to 25% of the current Effect Hit Rate, up to a maximum of 25%."]
+    },
+    {
+        "icon": "penacony_land_of_the_dreams.webp",
+        "name": "Penacony, Land of the Dreams",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases wearer's Energy Regeneration Rate by 5%. Increases DMG for all other allies with the same DMG Type as the wearer by 10%."]
+    },
+    {
+        "icon": "rutilant_arena.webp",
+        "name": "Rutilant Arena",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%."]
+    },
+    {
+        "icon": "space_sealing_station.webp",
+        "name": "Space Sealing Station",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's ATK by 12%. When the wearer's SPD reaches 120 or higher, the wearer's ATK increases by an extra 12%."]
+    },
+    {
+        "icon": "sprightly_vonwacq.webp",
+        "name": "Sprightly Vonwacq",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle."]
+    },
+    {
+        "icon": "talia_kingdom_of_banditry.webp",
+        "name": "Talia: Kingdom of Banditry",
+        "type": "PlanetaryOrnamentSet",
+        "effect": ["(2) Increases the wearer's Break Effect by 16%. When the wearer's SPD reaches 145 or higher, the wearer's Break effect increases by an extra 20%."]
+    }
+]

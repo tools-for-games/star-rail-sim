@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="header">
+        <div class="font-large bold">
+            Equipments
+        </div>
+        <button class="round" nz-popover [nzPopoverContent]="contentTemplate" [(nzPopoverVisible)]="addSetVisible"
+            (nzPopoverVisibleChange)="visibilityChange($event)" nzPopoverPlacement="rightTop" nzPopoverTrigger="click">
+            <span class="material-icons">
+                add
+            </span>
+        </button>
+    </div>
+
+    <div class="equipment-set-layout">
+        <div *ngFor="let relic of (currentBuild$ | async)?.relics" class="equipment-item bold">
+            <img [src]="'assets/relics/' + relic.icon" [alt]="relic.name">
+            <div>
+                <div class="font-thin font-small">
+                    {{relic.type === relicType.RelicSet ? 'Relic Set' : 'Planetary Ornament Set'}}
+                </div>
+                <div>
+                    ({{pieceCount(relic)}}) {{relic.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="font-large bold">
+        Attributes
+    </div>
+
+    <div>
+        <div class="equipment-piece-selector">
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelichead.png">
+            </button>
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelichands.png">
+            </button>
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelicbody.png">
+            </button>
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelicfoot.png">
+            </button>
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelicsphere.png">
+            </button>
+            <button class="round">
+                <img class="equipment-icon" src="assets/equipment-slots/iconrelicrope.png">
+            </button>
+        </div>
+    </div>
+</div>
+
+<ng-template #contentTemplate>
+    <div class="popover-container">
+        <relic-set-selector [(selected)]="selectedRelics" />
+    </div>
+</ng-template>

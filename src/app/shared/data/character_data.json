@@ -1,0 +1,326 @@
+[
+    {
+        "name": "Arlan",
+        "hp": 1199,
+        "atk": 599,
+        "def": 330,
+        "spd": 102,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Arlan",
+        "hp": 1199,
+        "atk": 599,
+        "def": 330,
+        "spd": 102,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Asta",
+        "hp": 1023,
+        "atk": 511,
+        "def": 463,
+        "spd": 106,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Bailu",
+        "hp": 1319,
+        "atk": 562,
+        "def": 485,
+        "spd": 98,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "Blade",
+        "hp": 1358,
+        "atk": 543,
+        "def": 485,
+        "spd": 97,
+        "maxEnergy": 130,
+        "skills": []
+    },
+    {
+        "name": "Bronya",
+        "hp": 1241,
+        "atk": 582,
+        "def": 533,
+        "spd": 99,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Clara",
+        "hp": 1319,
+        "atk": 737,
+        "def": 485,
+        "spd": 90,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Dan Heng",
+        "hp": 882,
+        "atk": 546,
+        "def": 396,
+        "spd": 110,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "Fu Xuan",
+        "hp": 1474,
+        "atk": 465,
+        "def": 606,
+        "spd": 100,
+        "maxEnergy": 135,
+        "skills": []
+    },
+    {
+        "name": "Gepard",
+        "hp": 1397,
+        "atk": 543,
+        "def": 654,
+        "spd": 92,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "Guinaifen",
+        "hp": 882,
+        "atk": 582,
+        "def": 441,
+        "spd": 106,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Herta",
+        "hp": 952,
+        "atk": 582,
+        "def": 396,
+        "spd": 100,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Himeko",
+        "hp": 1047,
+        "atk": 756,
+        "def": 436,
+        "spd": 96,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Hook",
+        "hp": 1340,
+        "atk": 617,
+        "def": 352,
+        "spd": 94,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Dan Heng • Imbibitor Lunae",
+        "hp": 1241,
+        "atk": 698,
+        "def": 363,
+        "spd": 102,
+        "maxEnergy": 140,
+        "skills": []
+    },
+    {
+        "name": "Jing Yuan",
+        "hp": 1164,
+        "atk": 698,
+        "def": 485,
+        "spd": 99,
+        "maxEnergy": 130,
+        "skills": []
+    },
+    {
+        "name": "Jingliu",
+        "hp": 1435,
+        "atk": 679,
+        "def": 485,
+        "spd": 96,
+        "maxEnergy": 140,
+        "skills": []
+    },
+    {
+        "name": "Kafka",
+        "hp": 1086,
+        "atk": 679,
+        "def": 485,
+        "spd": 100,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Luka",
+        "hp": 917,
+        "atk": 582,
+        "def": 485,
+        "spd": 103,
+        "maxEnergy": 130,
+        "skills": []
+    },
+    {
+        "name": "Luocha",
+        "hp": 1280,
+        "atk": 756,
+        "def": 363,
+        "spd": 101,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "Lynx",
+        "hp": 1058,
+        "atk": 493,
+        "def": 551,
+        "spd": 100,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "March 7th",
+        "hp": 1058,
+        "atk": 511,
+        "def": 573,
+        "spd": 101,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Natasha",
+        "hp": 1164,
+        "atk": 476,
+        "def": 507,
+        "spd": 98,
+        "maxEnergy": 90,
+        "skills": []
+    },
+    {
+        "name": "Pela",
+        "hp": 987,
+        "atk": 546,
+        "def": 463,
+        "spd": 105,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Qingque",
+        "hp": 1023,
+        "atk": 652,
+        "def": 441,
+        "spd": 98,
+        "maxEnergy": 140,
+        "skills": []
+    },
+    {
+        "name": "Sampo",
+        "hp": 1023,
+        "atk": 617,
+        "def": 396,
+        "spd": 102,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Seele",
+        "hp": 931,
+        "atk": 640,
+        "def": 363,
+        "spd": 115,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Serval",
+        "hp": 917,
+        "atk": 652,
+        "def": 374,
+        "spd": 104,
+        "maxEnergy": 100,
+        "skills": []
+    },
+    {
+        "name": "Silver Wolf",
+        "hp": 1047,
+        "atk": 640,
+        "def": 460,
+        "spd": 107,
+        "maxEnergy": 110,
+        "skills": []
+    },
+    {
+        "name": "Sushang",
+        "hp": 917,
+        "atk": 564,
+        "def": 418,
+        "spd": 107,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Tingyun",
+        "hp": 846,
+        "atk": 529,
+        "def": 396,
+        "spd": 112,
+        "maxEnergy": 130,
+        "skills": []
+    },
+    {
+        "name": "Trailblazer (Fire)",
+        "hp": 1241,
+        "atk": 601,
+        "def": 606,
+        "spd": 95,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Trailblazer (Physical)",
+        "hp": 1203,
+        "atk": 620,
+        "def": 460,
+        "spd": 100,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Welt",
+        "hp": 1125,
+        "atk": 620,
+        "def": 509,
+        "spd": 102,
+        "maxEnergy": 120,
+        "skills": []
+    },
+    {
+        "name": "Yanqing",
+        "hp": 892,
+        "atk": 679,
+        "def": 412,
+        "spd": 109,
+        "maxEnergy": 140,
+        "skills": []
+    },
+    {
+        "name": "Yukong",
+        "hp": 917,
+        "atk": 599,
+        "def": 374,
+        "spd": 107,
+        "maxEnergy": 130,
+        "skills": []
+    }
+]

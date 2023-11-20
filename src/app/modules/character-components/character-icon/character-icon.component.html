@@ -1,0 +1,9 @@
+<div class="layout">
+    <div class="item" [class.selected]="highlight" (click)="clickEvent($event, character)">
+        <div *ngIf="highlight" class="highlight"></div>
+        <img [src]="'assets/character-portraits/' + character.icon" [alt]="character.name">
+    </div>
+    <div *ngIf="showName" class="bold">
+        {{character.name}}
+    </div>
+</div>

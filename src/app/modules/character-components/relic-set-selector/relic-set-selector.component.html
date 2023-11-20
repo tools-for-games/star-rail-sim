@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="font-large bold">
+        Relics
+    </div>
+    <div class="equipment-selector-layout">
+        <div *ngFor="let relicInfo of relics;" cdkFocusInitial class="equipment-item bold"
+            [class.disabled]="!canAddRelic()" [class.selected]="selected.includes(relicInfo)"
+            (click)="clickRelic(relicInfo)">
+            <img [src]="'assets/relics/' + relicInfo.icon" [alt]="relicInfo.name">
+            <div>{{relicInfo.name}}</div>
+        </div>
+    </div>
+    <div class="font-large bold">
+        Planetary Ornament
+    </div>
+    <div class="equipment-selector-layout">
+        <div *ngFor="let relicInfo of planetaryOrnaments" class="equipment-item bold"
+            [class.selected]="selected.includes(relicInfo)" [class.disabled]="!canAddPlanetaryOrnament()" 
+            (click)="clickRelic(relicInfo)">
+            <img [src]="'assets/relics/' + relicInfo.icon" [alt]="relicInfo.name">
+            <div>{{relicInfo.name}}</div>
+        </div>
+    </div>
+</div>

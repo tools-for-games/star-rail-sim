@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="header font-large bold">
+        <div>{{currentCharacter?.character?.name}}</div>
+    </div>
+    
+    <div class="stat-container">
+        <div class="item-value-layout">
+            <div>HP</div>
+            <div>{{currentCharacter?.character?.stats?.base?.hp ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>ATK</div>
+            <div>{{currentCharacter?.character?.stats?.base?.atk ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>DEF</div>
+            <div>{{currentCharacter?.character?.stats?.base?.def ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>SPD</div>
+            <div>{{currentCharacter?.character?.stats?.base?.spd ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>CRIT Rate</div>
+            <div>{{currentCharacter?.character?.stats?.base?.critRate ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>CRIT Dmg</div>
+            <div>{{currentCharacter?.character?.stats?.base?.critDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Break Effect</div>
+            <div>{{currentCharacter?.character?.stats?.base?.breakEffect ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Outgoing Healing</div>
+            <div>{{currentCharacter?.character?.stats?.base?.outgoingHealing ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Energy</div>
+            <div>{{currentCharacter?.character?.stats?.base?.maxEnergy ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Energy Regeneration Rate</div>
+            <div>{{currentCharacter?.character?.stats?.base?.energyRegenerationRate ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Effect Hit Rate</div>
+            <div>{{currentCharacter?.character?.stats?.base?.effectHitRate ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Effect Res</div>
+            <div>{{currentCharacter?.character?.stats?.base?.effectRes ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>{{currentCharacter?.character?.element}} DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.fireDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Basic ATK DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.basicAtkDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Skill DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.skillDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Ultimate DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.ultimateDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>Follow Up DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.followUpDmg ?? 0}}</div>
+        </div>
+        <div class="item-value-layout">
+            <div>DoT DMG</div>
+            <div>{{currentCharacter?.character?.stats?.base?.dotDamage ?? 0}}</div>
+        </div>
+    </div>
+</div>

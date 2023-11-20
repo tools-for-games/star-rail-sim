@@ -1,0 +1,12 @@
+<nz-modal [(nzVisible)]="isVisible" (nzOnCancel)="cancel()" [nzFooter]="null" [nzStyle]="{ width: '1050px' }">
+    <ng-container *nzModalContent>
+        <div>
+            Filter
+        </div>
+        <div>
+            <ng-container *ngFor="let char of characters">
+                <character-icon *ngIf="!createdCharacters.includes(char)" [character]="char" (click)="selectCharacter(char)"/>
+            </ng-container>
+        </div>
+    </ng-container>
+</nz-modal>
