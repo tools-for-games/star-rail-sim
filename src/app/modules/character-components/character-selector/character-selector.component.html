@@ -1,9 +1,9 @@
 <nz-modal [(nzVisible)]="isVisible" (nzOnCancel)="cancel()" [nzFooter]="null" [nzStyle]="{ width: '1050px' }">
     <ng-container *nzModalContent>
         <div>
-            Filter
+            Future character filter
         </div>
-        <div>
+        <div class="character-layout">
             <ng-container *ngFor="let char of characters">
                 <character-icon *ngIf="!createdCharacters.includes(char)" [character]="char" (click)="selectCharacter(char)"/>
             </ng-container>

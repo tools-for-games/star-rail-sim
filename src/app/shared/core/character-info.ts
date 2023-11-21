@@ -65,7 +65,7 @@ export interface Skill {
   name: string;
   areaType: string;
   description: string;
-  maxEnergy: number;
+  energy: number;
   break: Break;
   values: number[][];
 }

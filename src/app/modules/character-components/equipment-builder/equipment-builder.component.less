@@ -1,0 +1,27 @@
+.stat-container {
+    display: grid;
+    padding: 0.75em;
+    gap: .5em;
+}
+
+.stat-layout {
+    display: grid;
+    grid-template-columns: auto 65px;
+    gap: .5em;
+}
+
+.rarity-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.rarity-content-layout {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+
+    .rarity-value {
+        transform: translate(0, 1px);
+    }
+}

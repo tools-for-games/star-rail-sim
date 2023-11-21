@@ -1,0 +1,78 @@
+<div class="stat-container">
+    <div class="font-thin font-small">
+        Rarity
+    </div>
+    <nz-radio-group [ngStyle]="{ 'width': '100%' }" [(ngModel)]="equipmentBuild.rarity" nzSize="large">
+        <label nz-radio-button [nzValue]="5" (click)="setRarity(5)">
+            <div class="rarity-content-layout">
+                <div class="rarity-value">
+                    5
+                </div>
+                <span class="material-icons">
+                    grade
+                </span>
+            </div>
+        </label>
+        <label nz-radio-button [nzValue]="4" (click)="setRarity(4)">
+            <div class="rarity-content-layout">
+                <div class="rarity-value">
+                    4
+                </div>
+                <span class="material-icons">
+                    grade
+                </span>
+            </div>
+        </label>
+        <label nz-radio-button [nzValue]="3" (click)="setRarity(3)">
+            <div class="rarity-content-layout">
+                <div class="rarity-value">
+                    3
+                </div>
+                <span class="material-icons">
+                    grade
+                </span>
+            </div>
+        </label>
+    </nz-radio-group>
+    <div class="font-thin font-small">
+        Main
+    </div>
+    <div class="stat-layout">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.mainStat"
+            (ngModelChange)="mainStatChange($event)">
+            <nz-option *ngFor="let option of getMainStats()" [nzLabel]="option.name"
+                [nzValue]="option.name"></nz-option>
+        </nz-select>
+        <div class="right-align">
+            {{getMainValue()}}
+        </div>
+    </div>
+    <div class="font-thin font-small">
+        Sub-stats
+    </div>
+    <div class="stat-layout">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[0]?.stat" (ngModelChange)="subStatChange(0, $event)">
+            <nz-option *ngFor="let option of getAvailableSubStats(0)" [nzLabel]="option.name"
+                [nzValue]="option.name"></nz-option>
+        </nz-select>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[0]?.value" />
+
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[1]?.stat" (ngModelChange)="subStatChange(1, $event)">
+            <nz-option *ngFor="let option of getAvailableSubStats(1)" [nzLabel]="option.name"
+                [nzValue]="option.name"></nz-option>
+        </nz-select>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[1]?.value" />
+
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[2]?.stat" (ngModelChange)="subStatChange(2, $event)">
+            <nz-option *ngFor="let option of getAvailableSubStats(2)" [nzLabel]="option.name"
+                [nzValue]="option.name"></nz-option>
+        </nz-select>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[2]?.value" />
+
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[3]?.stat" (ngModelChange)="subStatChange(3, $event)">
+            <nz-option *ngFor="let option of getAvailableSubStats(3)" [nzLabel]="option.name"
+                [nzValue]="option.name"></nz-option>
+        </nz-select>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[3]?.value" />
+    </div>
+</div>

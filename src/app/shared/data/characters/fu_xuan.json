@@ -5,7 +5,7 @@
     "rarity": 5,
     "stats": {
        "base": {
-            "hp": 1475,
+            "hp": 1474,
             "atk": 465,
             "def": 606,
             "spd": 100,
@@ -15,123 +15,153 @@
             "taunt": 150
        },
        "traces": {
-            "effectRes": 12,
+            "effRes": 10,
             "critRate": 18.7,
-            "hpRate": 18
+            "hp": 18
        }
     },
     "skills": [
         {
             "type": "Basicatk",
-            "name": "Deficit...",
+            "name": "Novaburst",
             "areaType": "SingleTarget",
-            "description": "Deals Quantum DMG equal to {1}% of Topaz's ATK to a single enemy.",
-            "maxEnergy": 20,
+            "description": "Deals Quantum DMG equal to {1}% of Fu Xuan's Max HP to a single enemy.",
+            "energy": 20,
             "break": { 
                 "value": 30, 
                 "areaType": "SingleTarget"
             },
             "values": [
+                [25],
+                [30],
+                [35],
+                [40],
+                [45],
                 [50],
-                [60],
-                [70],
-                [80],
-                [90],
-                [100],
-                [110]
+                [55]
             ]
         },
         {
             "type": "Skill",
-            "name": "Difficulty Paying?",
-            "areaType": "SingleTarget",
-            "description": "Inflicts a single target enemy with a Proof of Debt status, increasing the DMG it takes from follow-up atks by {0}%. Proof of Debt only takes effect on the most recent target it is applied to. If there are no enemies inflicted with Proof of Debt on the field when an ally's turn starts or when an ally takes action, Topaz will inflict a random enemy with Proof of Debt. Numby deals Fire DMG equal to {1}% of Topaz's ATK to this target. Using this Skill to deal DMG is considered as launching a follow-up atk.",
-            "maxEnergy": 30,
+            "name": "Known by Stars, Shown by Hearts",
+            "areaType": "Defense",
+            "description": "Activates Matrix of Prescience, via which other team members will Distribute 65% of the DMG they receive (before this DMG is mitigated by any Shields) to Fu Xuan for 3 turn(s). While affected by Matrix of Prescience, all team members gain the Knowledge effect, which increases their respective Max HP by {0}% of Fu Xuan's Max HP, and increases CRIT Rate by {1}%. When Fu Xuan is knocked down, the Matrix of Prescience will be dispelled.",
+            "energy": 30,
             "break": { 
-                "value": 60, 
+                "value": 0, 
                 "areaType": "SingleTarget"
             },
             "values": [
-                [25, 75], 
-                [27.5, 82.5], 
-                [30, 90], 
-                [32.5,  97.5], 
-                [35,  105], 
-                [37.5,  112.5], 
-                [40.6, 121.9], 
-                [43.8, 131.3], 
-                [46.9, 140.6], 
-                [50, 150], 
-                [52.5, 157.5], 
-                [55, 165]
+                [3   , 6], 
+                [3.3 , 7], 
+                [3.6 , 7], 
+                [3.9 , 8], 
+                [4.2 , 8], 
+                [4.5 , 9], 
+                [4.9 , 10], 
+                [5.3 , 11], 
+                [5.6 , 11], 
+                [6   , 12], 
+                [6.3 , 13], 
+                [6.6 , 13]
             ]
         },
         {
             "type": "Ultimate",
-            "name": "Turn a Profit!",
-            "areaType": "Enhance",
-            "description": "Numby enters the Windfall Bonanza! state and its DMG multiplier increases by {0}% and CRIT DMG increases by {1}%. Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by {2}%. Numby exits the Windfall Bonanza! state after using {3} atks.",
-            "maxEnergy": 0,
+            "name": "Woes of Many Morphed to One",
+            "areaType": "AoE",
+            "description": "Deals Quantum DMG equal to {1}% of Fu Xuan's Max HP to all enemies and obtains 1 trigger count for the HP Restore effect granted by Fu Xuan's Talent.",
+            "energy": 5,
             "break": { 
-                "value": 0, 
-                "areaType": "None"
+                "value": 60, 
+                "areaType": "AoE"
             },
             "values": [
-                [175, 12.5, 50, 2],
-                [282.5, 13.75, 50, 2],
-                [390, 15, 50, 2],
-                [497.5, 16.25, 50, 2],
-                [5105, 17.5, 50, 2],
-                [6112.5, 18.75, 50, 2],
-                [7121.88, 20.31, 50, 2],
-                [8131.25, 21.88, 50, 2],
-                [9140.63, 23.44, 50, 2],
-                [10150, 25, 50, 2],
-                [11157.5, 26.25, 50, 2],
-                [12165, 27.5, 50, 2]
+                [60],
+                [64],
+                [68],
+                [72],
+                [76],
+                [80],
+                [85],
+                [90],
+                [95],
+                [100],
+                [104],
+                [108]
             ]
         },
         {
             "type": "Talent",
-            "name": "Trotter Market!?",
-            "areaType": "SingleTarget",
-            "description": "Summons Numby at the start of battle. Numby has {0} SPD by default. When taking action, Numby launches follow-up atks on a single enemy target afflicted with Proof of Debt, dealing Fire DMG equal to {1}% of Topaz's ATK. When enemies afflicted with Proof of Debt receive an ally's follow-up atks, Numby's action is Advanced Forward by {2}%. The action Advance Forward effect cannot be triggered during Numby's own turn. When Topaz is downed, Numby disappears.",
-            "maxEnergy": 0,
+            "name": "Bleak Breeds Bliss",
+            "areaType": "Restore",
+            "description": "While Fu Xuan is still active in battle, Misfortune Avoidance is applied to the entire team. With Misfortune Avoidance, allies take {0}% less DMG.When Fu Xuan's current HP falls to 50% of her Max HP or less, HP Restore will be triggered for Fu Xuan, restoring her HP by {1}% of the amount of HP she is currently missing. This effect cannot be triggered if she receives a killing blow. This effect possesses 1 trigger count by default and can have a maximum of 2 trigger counts.",
+            "energy": 5,
             "break": { 
-                "value": 60, 
-                "areaType": "SingleTarget"
+                "value": 0, 
+                "areaType": "Restore"
             },
             "values": [
-                [80, 75, 50], 
-                [80, 82.5, 50], 
-                [80, 90, 50], 
-                [80, 97.5, 50], 
-                [80, 105, 50], 
-                [80, 112.5, 50], 
-                [80, 121.88, 50], 
-                [80, 131.25, 50], 
-                [80, 140.63, 50], 
-                [80, 150, 50], 
-                [80, 157.5, 50], 
-                [80, 165, 50]
+                [10 , 80], 
+                [10.8 , 81], 
+                [11.6 , 82], 
+                [12.4 , 83], 
+                [13.2 , 84], 
+                [14, 85], 
+                [15, 86.3], 
+                [16, 87.5], 
+                [17, 88.8], 
+                [18, 90], 
+                [18.8 , 91], 
+                [19.6 , 92]
             ]
         },
         {
             "type": "Technique",
-            "name": "Explicit Subsidy",
-            "areaType": "Enhance",
-            "description": "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius. Using her Technique will regenerate {0} maxEnergy for Topaz after Numby's first atk in the next battle. If Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of {1} bonus credits can be received per calendar day. After using her Technique and defeating enemies in Simulated Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio.",
-            "maxEnergy": 0,
+            "name": "Of Fortune Comes Fate",
+            "areaType": "Defense",
+            "description": "After the Technique is used, all team members receive a Barrier, lasting for 20 seconds. This Barrier can block all enemy attacks, and the team will not enter battle when attacked. Entering battle while the Barrier is active will have Fu Xuan automatically activate Matrix of Prescience at the start of the battle, lasting for 2 turn(s).",
+            "energy": 0,
             "break": { 
                 "value": 0, 
                 "areaType": "None"
             },
             "values": [
-                [60, 10000]
+                [0]
             ]
         }
     ],
     "eidolons": [
+        {
+            "tier": 1,
+            "name": "Dominus Pacis",
+            "description": "The Knowledge effect increases CRIT DMG by 30%."
+        },
+        {
+            "tier": 2,
+            "name": "Optimus Felix",
+            "description": "If any team member is struck by a killing blow while Matrix of Prescience is active, then all allies who were struck by a killing blow during this action will not be knocked down, and 70% of their Max HP is immediately restored. This effect can trigger 1 time per battle."
+        },
+        {
+            "tier": 3,
+            "name": "Apex Nexus",
+            "description": "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15."
+        },
+        {
+            "tier": 4,
+            "name": "Fortuna Stellaris",
+            "description": "When other allies under Matrix of Prescience are attacked, Fu Xuan regenerates 5 Energy."
+        },
+        {
+            "tier": 5,
+            "name": "Arbiter Primus",
+            "description": "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10."
+        },
+        {
+            "tier": 6,
+            "name": "Omnia Vita",
+            "description": "Once Matrix of Prescience is activated, it will keep a tally of the total HP lost by all team members in the current battle. Fu Xuan's Ultimate DMG will increase by 200% of this tally of HP loss. This tally is also capped at 120% of Fu Xuan's Max HP and the tally value will reset and re-accumulate after Fu Xuan's Ultimate is used."
+        }
     ],
     "icon": "Character_Fu_Xuan_Icon.webp"
 }

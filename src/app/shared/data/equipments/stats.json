@@ -1,0 +1,467 @@
+[
+    {
+        "name": "HP",
+        "icon": "Icon_HP.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Head"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 705
+                },
+                {
+                    "rarity": 4,
+                    "value": 468
+                },
+                {
+                    "rarity": 3,
+                    "value": 281
+                }
+            ]
+        }
+    },
+    {
+        "name": "ATK",
+        "icon": "Icon_ATK.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Hands"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 352
+                },
+                {
+                    "rarity": 4,
+                    "value": 234
+                },
+                {
+                    "rarity": 3,
+                    "value": 140
+                }
+            ]
+        }
+    },
+    {
+        "name": "HP Rate",
+        "icon": "Icon_HP.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Feet",
+                "Body",
+                "PlanarSphere",
+                "LinkRope"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 43.2
+                },
+                {
+                    "rarity": 4,
+                    "value": 28.7
+                },
+                {
+                    "rarity": 3,
+                    "value": 17.2
+                }
+            ]
+        }
+    },
+    {
+        "name": "ATK Rate",
+        "icon": "Icon_ATK.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Feet",
+                "Body",
+                "PlanarSphere",
+                "LinkRope"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 43.2
+                },
+                {
+                    "rarity": 4,
+                    "value": 28.7
+                },
+                {
+                    "rarity": 3,
+                    "value": 17.2
+                }
+            ]
+        }
+    },
+    {
+        "name": "DEF Rate",
+        "icon": "Icon_DEF.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Feet",
+                "Body",
+                "PlanarSphere",
+                "LinkRope"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 54
+                },
+                {
+                    "rarity": 4,
+                    "value": 35.9
+                },
+                {
+                    "rarity": 3,
+                    "value": 21.5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Crit Rate",
+        "icon": "Icon_CRIT_Rate.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Body"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 32.4
+                },
+                {
+                    "rarity": 4,
+                    "value": 21.5
+                },
+                {
+                    "rarity": 3,
+                    "value": 12.9
+                }
+            ]
+        }
+    },
+    {
+        "name": "Crit DMG",
+        "icon": "Icon_CRIT_DMG.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Body"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 64.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 43.1
+                },
+                {
+                    "rarity": 3,
+                    "value": 25.8
+                }
+            ]
+        }
+    },
+    {
+        "name": "Outgoing Healing",
+        "icon": "Icon_Outgoing_Healing_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "Body"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 34.5
+                },
+                {
+                    "rarity": 4,
+                    "value": 23
+                },
+                {
+                    "rarity": 3,
+                    "value": 13.7
+                }
+            ]
+        }
+    },
+    {
+        "name": "Effect Hit Rate",
+        "icon": "Icon_Effect_Hit_Rate.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Body"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 43.2
+                },
+                {
+                    "rarity": 4,
+                    "value": 28.7
+                },
+                {
+                    "rarity": 3,
+                    "value": 17.2
+                }
+            ]
+        }
+    },
+    {
+        "name": "Speed",
+        "icon": "Icon_SPD.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "Feet"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 25
+                },
+                {
+                    "rarity": 4,
+                    "value": 16
+                },
+                {
+                    "rarity": 3,
+                    "value": 11
+                }
+            ]
+        }
+    },
+    {
+        "name": "Break Effect",
+        "icon": "Icon_Break_Effect.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [
+                "LinkRope"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 54
+                },
+                {
+                    "rarity": 4,
+                    "value": 43.1
+                },
+                {
+                    "rarity": 3,
+                    "value": 25.2
+                }
+            ]
+        }
+    },
+    {
+        "name": "Energy Regeneration Rate",
+        "icon": "Icon_Energy_Regeneration_Rate.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "LinkRope"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 19.4
+                },
+                {
+                    "rarity": 4,
+                    "value": 12.9
+                },
+                {
+                    "rarity": 3,
+                    "value": 7.7
+                }
+            ]
+        }
+    },
+    {
+        "name": "Fire DMG",
+        "icon": "Icon_Fire_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Quantum DMG",
+        "icon": "Icon_PhyQuantum_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Ice DMG",
+        "icon": "IconIce_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Physical DMG",
+        "icon": "Icon_PhysPhysical_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Imaginary DMG",
+        "icon": "Icon_PhysiImaginary_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Lightning DMG",
+        "icon": "Icon_PhysiLightning_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Wind DMG",
+        "icon": "Icon_Wind_DMG_Boost.webp",
+        "isSubStat": false,
+        "mainValue": {
+            "slotTypes": [
+                "PlanarSphere"
+            ],
+            "values": [
+                {
+                    "rarity": 5,
+                    "value": 38.8
+                },
+                {
+                    "rarity": 4,
+                    "value": 25.8
+                },
+                {
+                    "rarity": 3,
+                    "value": 15.4
+                }
+            ]
+        }
+    }
+]

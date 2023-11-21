@@ -32,3 +32,21 @@ button {
         .box-glow(@color-foreground);
     }
 }
+
+button.equip-slot {
+    border-radius: 0;
+    padding: 0.5em;
+    border: unset;
+    
+    &.selected {
+        background-color: @color-background-highlight;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: unset;
+        &:not(.selected) {
+            background-color: @color-background-highlight;
+        }
+    }
+}

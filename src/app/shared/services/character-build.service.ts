@@ -43,6 +43,10 @@ export class CharacterBuildService {
         return this.currentSelected$.asObservable();
     }
 
+    getCurrentSelectedValue(): CharacterBuild | null {
+        return this.currentSelected$.value;
+    }
+
     setCurrentSelected(characterName: string) {
         const build = this.getCharacterBuild(characterName);
         this.currentSelected$.next(build ?? null);

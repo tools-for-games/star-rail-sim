@@ -26,7 +26,7 @@
             "name": "Deficit...",
             "areaType": "SingleTarget",
             "description": "Deals Fire DMG equal to {1}% of Topaz's ATK to a single enemy.",
-            "maxEnergy": 20,
+            "energy": 20,
             "break": { 
                 "value": 30, 
                 "areaType": "SingleTarget"
@@ -46,7 +46,7 @@
             "name": "Difficulty Paying?",
             "areaType": "SingleTarget",
             "description": "Inflicts a single target enemy with a Proof of Debt status, increasing the DMG it takes from follow-up atks by {0}%. Proof of Debt only takes effect on the most recent target it is applied to. If there are no enemies inflicted with Proof of Debt on the field when an ally's turn starts or when an ally takes action, Topaz will inflict a random enemy with Proof of Debt. Numby deals Fire DMG equal to {1}% of Topaz's ATK to this target. Using this Skill to deal DMG is considered as launching a follow-up atk.",
-            "maxEnergy": 30,
+            "energy": 30,
             "break": { 
                 "value": 60, 
                 "areaType": "SingleTarget"
@@ -71,7 +71,7 @@
             "name": "Turn a Profit!",
             "areaType": "Enhance",
             "description": "Numby enters the Windfall Bonanza! state and its DMG multiplier increases by {0}% and CRIT DMG increases by {1}%. Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by {2}%. Numby exits the Windfall Bonanza! state after using {3} atks.",
-            "maxEnergy": 0,
+            "energy": 5,
             "break": { 
                 "value": 0, 
                 "areaType": "None"
@@ -96,7 +96,7 @@
             "name": "Trotter Market!?",
             "areaType": "SingleTarget",
             "description": "Summons Numby at the start of battle. Numby has {0} SPD by default. When taking action, Numby launches follow-up atks on a single enemy target afflicted with Proof of Debt, dealing Fire DMG equal to {1}% of Topaz's ATK. When enemies afflicted with Proof of Debt receive an ally's follow-up atks, Numby's action is Advanced Forward by {2}%. The action Advance Forward effect cannot be triggered during Numby's own turn. When Topaz is downed, Numby disappears.",
-            "maxEnergy": 0,
+            "energy": 0,
             "break": { 
                 "value": 60, 
                 "areaType": "SingleTarget"
@@ -120,8 +120,8 @@
             "type": "Technique",
             "name": "Explicit Subsidy",
             "areaType": "Enhance",
-            "description": "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius. Using her Technique will regenerate {0} maxEnergy for Topaz after Numby's first atk in the next battle. If Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of {1} bonus credits can be received per calendar day. After using her Technique and defeating enemies in Simulated Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio.",
-            "maxEnergy": 0,
+            "description": "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius. Using her Technique will regenerate {0} energy for Topaz after Numby's first atk in the next battle. If Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of {1} bonus credits can be received per calendar day. After using her Technique and defeating enemies in Simulated Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio.",
+            "energy": 0,
             "break": { 
                 "value": 0, 
                 "areaType": "None"
@@ -140,7 +140,7 @@
         {
             "tier": 2,
             "name": "Bona Fide Acquisition",
-            "description": "After Numby takes action and launches an atk, Topaz regenerates 5 maxEnergy."
+            "description": "After Numby takes action and launches an atk, Topaz regenerates 5 energy."
         },
         {
             "tier": 3,

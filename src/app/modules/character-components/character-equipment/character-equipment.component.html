@@ -24,31 +24,10 @@
             </div>
         </div>
     </div>
-
-    <div class="font-large bold">
-        Attributes
-    </div>
-
     <div>
-        <div class="equipment-piece-selector">
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelichead.png">
-            </button>
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelichands.png">
-            </button>
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelicbody.png">
-            </button>
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelicfoot.png">
-            </button>
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelicsphere.png">
-            </button>
-            <button class="round">
-                <img class="equipment-icon" src="assets/equipment-slots/iconrelicrope.png">
-            </button>
+        <equipment-slot-selector [(selected)]="selectedEquipmentSlot" (selectedChange)="changeEquipmentSlot($event)"/>
+        <div *ngIf="currentEquipment" class="background-highlight">
+            <equipment-builder [(equipmentBuild)]="currentEquipment" />
         </div>
     </div>
 </div>
