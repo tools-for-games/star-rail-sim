@@ -1,41 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CharacterBuild, EquipmentBuildStat } from '@shared/core/builds/character-build';
 import { EquipmentSlotType } from '@shared/core/equipment-slot-type';
 import { RelicInfo, RelicType } from '@shared/core/relic-info';
 import { CharacterBuildService } from '@shared/services/character-build.service';
 import { RelicService } from '@shared/services/relic.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
     selector: 'character-equipment',
     templateUrl: './character-equipment.component.html',
     styleUrls: ['./character-equipment.component.less']
 })
-export class CharacterEquipmentComponent implements OnInit {
+export class CharacterEquipmentComponent implements OnDestroy {
+    subscription = new Subscription();
+
     addSetVisible: boolean = false;
-    relics: RelicInfo[];
-    planetaryOrnaments: RelicInfo[];
-    currentBuild$: Observable<CharacterBuild | null>;
+    currentBuild: CharacterBuild | null = null;
     relicType = RelicType;
 
     selectedRelics: RelicInfo[] = [];
 
-    statList = ['CRIT Rate', 'CRIT Dmg', 'ATK', 'ATK Rate', 'Effect Hit Rate'];
-
-    selectedEquipmentSlot: EquipmentSlotType = EquipmentSlotType.Head;
     currentEquipment?: EquipmentBuildStat;
 
-    constructor(
-        private relicService: RelicService,
-        private characterBuildService: CharacterBuildService
-    ) {
-        this.relics = this.relicService.getRelics();
-        this.planetaryOrnaments = this.relicService.getPlanetaryOrnaments();
-        this.currentBuild$ = this.characterBuildService.getCurrentSelected();
+    constructor(private characterBuildService: CharacterBuildService) {
+        const sub = this.characterBuildService.getCurrentSelected()
+            .subscribe((x) => this.buildChange(x));
+
+        this.subscription.add(sub);
     }
 
-    ngOnInit(): void {
-        this.changeEquipmentSlot(this.selectedEquipmentSlot);
+    buildChange(build: CharacterBuild | null) {
+        this.currentBuild = build;
+        this.currentEquipment = build?.equipmentStats.find(x => x.equipmentSlotType == EquipmentSlotType.Head);
+    }
+
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
     }
 
     pieceCount(relic: RelicInfo): number {
@@ -51,7 +51,10 @@ export class CharacterEquipmentComponent implements OnInit {
     }
 
     changeEquipmentSlot(type: EquipmentSlotType) {
-        const current = this.characterBuildService.getCurrentSelectedValue()
-        this.currentEquipment = current?.equipmentStats.find(x => x.equipmentSlotType == type)
+        this.currentEquipment = this.currentBuild?.equipmentStats.find(x => x.equipmentSlotType == type);
+    }
+
+    equipmentBuildChange(value: EquipmentBuildStat) {
+        this.characterBuildService.updateEquipmentBuildStat(value);
     }
 }

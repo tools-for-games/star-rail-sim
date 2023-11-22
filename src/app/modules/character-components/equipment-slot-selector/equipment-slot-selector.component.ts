@@ -7,7 +7,7 @@ import { EquipmentSlotType } from '@shared/core/equipment-slot-type';
     styleUrls: ['./equipment-slot-selector.component.less']
 })
 export class EquipmentSlotSelectorComponent {
-    @Input() selected: EquipmentSlotType = EquipmentSlotType.Head;
+    @Input() selected?: EquipmentSlotType;
     @Output() selectedChange = new EventEmitter<EquipmentSlotType>();
     
     equipmentSlotType = EquipmentSlotType;

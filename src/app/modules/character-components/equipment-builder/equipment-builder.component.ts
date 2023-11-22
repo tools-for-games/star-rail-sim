@@ -52,6 +52,4 @@ export class EquipmentBuilderComponent {
         this.equipmentBuild.values[index] = { stat: current?.stat, value: value };
         this.equipmentBuildChange.emit(this.equipmentBuild);
     }
-
-
 }

@@ -12,7 +12,7 @@
     </div>
 
     <div class="equipment-set-layout">
-        <div *ngFor="let relic of (currentBuild$ | async)?.relics" class="equipment-item bold">
+        <div *ngFor="let relic of currentBuild?.relics" class="equipment-item bold">
             <img [src]="'assets/relics/' + relic.icon" [alt]="relic.name">
             <div>
                 <div class="font-thin font-small">
@@ -25,9 +25,11 @@
         </div>
     </div>
     <div>
-        <equipment-slot-selector [(selected)]="selectedEquipmentSlot" (selectedChange)="changeEquipmentSlot($event)"/>
-        <div *ngIf="currentEquipment" class="background-highlight">
-            <equipment-builder [(equipmentBuild)]="currentEquipment" />
+        <equipment-slot-selector *ngIf="currentEquipment" [selected]="currentEquipment?.equipmentSlotType"
+            (selectedChange)="changeEquipmentSlot($event)" />
+        <div class="background-highlight">
+            <equipment-builder *ngIf="currentEquipment" [equipmentBuild]="currentEquipment"
+                (equipmentBuildChange)="equipmentBuildChange($event)" />
         </div>
     </div>
 </div>
