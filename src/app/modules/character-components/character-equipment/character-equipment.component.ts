@@ -18,8 +18,6 @@ export class CharacterEquipmentComponent implements OnDestroy {
     currentBuild: CharacterBuild | null = null;
     relicType = RelicType;
 
-    selectedRelics: RelicInfo[] = [];
-
     currentEquipment?: EquipmentBuildStat;
 
     constructor(private characterBuildService: CharacterBuildService) {
@@ -39,15 +37,12 @@ export class CharacterEquipmentComponent implements OnDestroy {
     }
 
     pieceCount(relic: RelicInfo): number {
+        if (!this.currentBuild) return 0;
+
         if (relic.type === RelicType.PlanetaryOrnamentSet)
             return 2;
-        return 4 / this.selectedRelics.filter(x => x.type == relic.type).length;
-    }
-
-    visibilityChange(isVisible: boolean) {
-        if (!isVisible) {
-            this.characterBuildService.setRelic(this.selectedRelics);
-        }
+        
+        return 4 / this.currentBuild.relics.filter(x => x.type == relic.type).length;
     }
 
     changeEquipmentSlot(type: EquipmentSlotType) {
@@ -56,5 +51,6 @@ export class CharacterEquipmentComponent implements OnDestroy {
 
     equipmentBuildChange(value: EquipmentBuildStat) {
         this.characterBuildService.updateEquipmentBuildStat(value);
+        console.log('stats updated');
     }
 }

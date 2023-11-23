@@ -3,15 +3,21 @@ import { CharacterInfo } from '../core/character-info';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { CharacterBuild, EquipmentBuildStat } from '../core/builds/character-build';
 import { ALL_CHARACTERS } from '@shared/core/constants';
-import { RelicInfo, RelicType } from '@shared/core/relic-info';
+import { RelicInfo } from '@shared/core/relic-info';
 
-@Injectable({
-    providedIn: 'root',
-})
+const BUILDS_KEY = 'BUILDS_KEY';
+
+@Injectable()
 export class CharacterBuildService {
-    // placeholder default values to test
-    private currentSelected$ = new BehaviorSubject<CharacterBuild | null>(new CharacterBuild(ALL_CHARACTERS[0]));
-    private createdCharacters$ = new BehaviorSubject<CharacterBuild[]>([new CharacterBuild(ALL_CHARACTERS[0])]);
+    private currentSelected$ = new BehaviorSubject<CharacterBuild | null>(null);
+    private createdCharacters$ = new BehaviorSubject<CharacterBuild[]>([]);
+
+    constructor() {
+        this.loadBuildsFromLocalStorage();
+        this.createdCharacters$.asObservable().subscribe(builds => {
+            this.saveBuildsToLocalStorage(builds);
+        })
+    }
 
     private updateBuild(build: CharacterBuild) {
         const builds = this.createdCharacters$.value;
@@ -22,16 +28,32 @@ export class CharacterBuildService {
             const index = builds.indexOf(current);
             if (index !== -1) {
                 builds[index] = build;
+                this.createdCharacters$.next(builds);
                 return;
             }
         }
 
+        // add new
         builds.push(build);
-
-        // update observables
         this.createdCharacters$.next(builds);
         if (build.character.name === this.currentSelected$.value?.character.name) {
             this.currentSelected$.next(build);
+        }
+    }
+
+    private saveBuildsToLocalStorage(values: CharacterBuild[]) {
+        const stringfiedValue = JSON.stringify(values);
+        localStorage.setItem(BUILDS_KEY, stringfiedValue);
+    }
+
+    private loadBuildsFromLocalStorage() {
+        const stringfiedValue = localStorage.getItem(BUILDS_KEY);
+        if (stringfiedValue) {
+            const builds: CharacterBuild[] = JSON.parse(stringfiedValue);
+            this.createdCharacters$.next(builds);
+            if (builds?.length > 0) {
+                this.currentSelected$.next(builds[0])
+            }
         }
     }
 
@@ -61,7 +83,9 @@ export class CharacterBuildService {
     }
 
     createCharacter(character: CharacterBuild) {
-        this.createdCharacters$.next([...this.createdCharacters$.value, character]);
+        const builds = [...this.createdCharacters$.value, character];
+        this.createdCharacters$.next(builds);
+        this.currentSelected$.next(character);
     }
 
     setRelic(relics: RelicInfo[]) {
@@ -69,7 +93,6 @@ export class CharacterBuildService {
         if (!build) return;
 
         build.relics = [...relics];
-
         this.updateBuild(build);
     }
 
@@ -83,7 +106,7 @@ export class CharacterBuildService {
         const index = build.equipmentStats.indexOf(currentEquipment);
         if (index == -1) return;
 
-        build.equipmentStats[index] = value;        
+        build.equipmentStats[index] = value;
         this.updateBuild(build);
     }
 }

@@ -4,7 +4,7 @@
             Equipments
         </div>
         <button class="round" nz-popover [nzPopoverContent]="contentTemplate" [(nzPopoverVisible)]="addSetVisible"
-            (nzPopoverVisibleChange)="visibilityChange($event)" nzPopoverPlacement="rightTop" nzPopoverTrigger="click">
+            nzPopoverPlacement="rightTop" nzPopoverTrigger="click">
             <span class="material-icons">
                 add
             </span>
@@ -36,6 +36,6 @@
 
 <ng-template #contentTemplate>
     <div class="popover-container">
-        <relic-set-selector [(selected)]="selectedRelics" />
+        <relic-set-selector *ngIf="currentBuild" [(selected)]="currentBuild.relics" />
     </div>
 </ng-template>

@@ -9,7 +9,7 @@ import { Stat } from '@shared/core/equipment-stat';
     styleUrls: ['./equipment-builder.component.less']
 })
 export class EquipmentBuilderComponent {
-    @Input({ required: true }) 
+    @Input({ required: true })
     equipmentBuild!: EquipmentBuildStat;
     @Output()
     equipmentBuildChange = new EventEmitter<EquipmentBuildStat>();
@@ -22,9 +22,11 @@ export class EquipmentBuilderComponent {
     }
 
     getAvailableSubStats(index: number) {
-        const selectedstat = this.equipmentBuild.values[index]?.stat
-        const selected = this.equipmentBuild.values.map(v => v.stat)
-        return this.subStats.filter(x => !selected.includes(x.name) || selectedstat === x.name);
+        const currentSelectedStat = this.equipmentBuild.values[index]?.stat;
+        const selected = this.equipmentBuild.values.map(v => v.stat);
+        return this.subStats
+            .filter(x => !selected.includes(x.name) || currentSelectedStat === x.name)
+            .filter(x => this.equipmentBuild.mainStat !== x.name);
     }
 
     getMainValue() {

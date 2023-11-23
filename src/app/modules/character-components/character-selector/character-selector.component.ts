@@ -15,12 +15,12 @@ export class CharacterSelectorComponent implements OnDestroy {
 
     subscription = new Subscription();
     characters: CharacterInfo[] = [];
-    createdCharacters: CharacterInfo[] = [];
+    createdCharacters: string[] = [];
 
     constructor(private characterBuildService: CharacterBuildService) {
         this.characters = this.characterBuildService.getCharacters();
         const createdCharacterSub = this.characterBuildService.getCreatedCharacters()
-            .subscribe(values => this.createdCharacters = values.map(x => x.character));
+            .subscribe(values => this.createdCharacters = values.map(x => x.character.name));
         this.subscription.add(createdCharacterSub);
     }
 
