@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RelicInfo, RelicType } from '@shared/core/relic-info';
-import { RelicService } from '@shared/services/relic.service';
+import { EquipmentService } from '@shared/services/equipment.service';
 
 @Component({
     selector: 'relic-set-selector',
@@ -8,33 +8,47 @@ import { RelicService } from '@shared/services/relic.service';
     styleUrls: ['./relic-set-selector.component.less']
 })
 export class RelicSetSelectorComponent {
-    @Input() selected: RelicInfo[] = [];
-    @Output() selectedChange = new EventEmitter<RelicInfo[]>();
+    @Input() selected: string[] = [];
+    @Output() selectedChange = new EventEmitter<string[]>();
 
     relics: RelicInfo[];
     planetaryOrnaments: RelicInfo[];
+    private allRelics: RelicInfo[];
 
     constructor(
-        private relicService: RelicService,
+        private equipmentService: EquipmentService,
     ) {
-        this.relics = this.relicService.getRelics();
-        this.planetaryOrnaments = this.relicService.getPlanetaryOrnaments();
+        this.relics = this.equipmentService.getRelics();
+        this.planetaryOrnaments = this.equipmentService.getPlanetaryOrnaments();
+        this.allRelics = [...this.relics, ...this.planetaryOrnaments];
     }
 
-    canAddRelic() {
-        return this.selected.filter(x => x.type === RelicType.RelicSet)?.length < 2;
+    canAddRelic() : boolean {
+        const selectedRelics = this.allRelics.filter(x => this.selected.includes(x.id));
+        return selectedRelics.filter(x => x.type === RelicType.RelicSet)?.length < 2;
     }
 
-    canAddPlanetaryOrnament() {
-        return !this.selected.filter(x => x.type === RelicType.PlanetaryOrnamentSet)?.length;
+    canAddPlanetaryOrnament() : boolean {
+        const selectedRelics = this.allRelics.filter(x => this.selected.includes(x.id));
+        return !selectedRelics.filter(x => x.type === RelicType.PlanetaryOrnamentSet)?.length;
     }
 
-    clickRelic(relicInfo: RelicInfo) {
-        const index = this.selected.indexOf(relicInfo)
+    isRelicSelected(relicId: string): boolean {
+        return !!this.selected.includes(relicId);
+    }
+
+    clickRelic(relicId: string) {
+        const newSelection = [...this.selected];
+
+        const index = newSelection.indexOf(relicId);
         if (index != -1) {
-            this.selected.splice(index, 1);
+            newSelection.splice(index, 1);
+            this.selectedChange.emit(newSelection);
             return;
         }
+        
+        const relicInfo = this.allRelics.find(x => x.id == relicId);
+        if (!relicInfo) return;
 
         if (relicInfo.type === RelicType.RelicSet && !this.canAddRelic()) {
             return;
@@ -43,6 +57,7 @@ export class RelicSetSelectorComponent {
             return;
         }
 
-        this.selected.push(relicInfo);
+        newSelection.push(relicId);
+        this.selectedChange.emit(newSelection);
     }
 }

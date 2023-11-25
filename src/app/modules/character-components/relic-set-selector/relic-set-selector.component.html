@@ -4,8 +4,8 @@
     </div>
     <div class="equipment-selector-layout">
         <div *ngFor="let relicInfo of relics;" cdkFocusInitial class="equipment-item bold"
-            [class.disabled]="!canAddRelic()" [class.selected]="selected.includes(relicInfo)"
-            (click)="clickRelic(relicInfo)">
+            [class.disabled]="!canAddRelic()" [class.selected]="isRelicSelected(relicInfo.id)"
+            (click)="clickRelic(relicInfo.id)">
             <img [src]="'assets/relics/' + relicInfo.icon" [alt]="relicInfo.name">
             <div>{{relicInfo.name}}</div>
         </div>
@@ -15,8 +15,8 @@
     </div>
     <div class="equipment-selector-layout">
         <div *ngFor="let relicInfo of planetaryOrnaments" class="equipment-item bold"
-            [class.selected]="selected.includes(relicInfo)" [class.disabled]="!canAddPlanetaryOrnament()" 
-            (click)="clickRelic(relicInfo)">
+            [class.selected]="isRelicSelected(relicInfo.id)" [class.disabled]="!canAddPlanetaryOrnament()" 
+            (click)="clickRelic(relicInfo.id)">
             <img [src]="'assets/relics/' + relicInfo.icon" [alt]="relicInfo.name">
             <div>{{relicInfo.name}}</div>
         </div>

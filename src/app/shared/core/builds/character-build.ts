@@ -1,6 +1,6 @@
 import { CharacterInfo } from "@shared/core/character-info";
-import { RelicInfo } from "../relic-info";
 import { EquipmentSlotType } from "../equipment-slot-type";
+import { StatType } from "./stat-type";
 
 export interface EquipmentStatValue {
     stat: string;
@@ -14,17 +14,24 @@ export interface EquipmentBuildStat {
     values: EquipmentStatValue[];
 }
 
-export class CharacterBuild {
-    character: CharacterInfo;
-    relics: RelicInfo[];
-    equipmentStats: EquipmentBuildStat[];
+export interface LightCone {
+    id: string,
+    superimpose: number;
+}
 
-    constructor(character: CharacterInfo) {
-        this.character = character;
-        this.relics = [];
+
+export class CharacterBuild {
+    characterId: string;
+    relicIds: string[];
+    equipmentStats: EquipmentBuildStat[];
+    lightCone?: LightCone;
+
+    constructor(characterId: string) {
+        this.characterId = characterId;
+        this.relicIds = [];
         this.equipmentStats = [
-            { equipmentSlotType: EquipmentSlotType.Head, rarity: 5, values: [] },
-            { equipmentSlotType: EquipmentSlotType.Hands, rarity: 5, values: [] },
+            { equipmentSlotType: EquipmentSlotType.Head, rarity: 5, values: [], mainStat: StatType.Hp },
+            { equipmentSlotType: EquipmentSlotType.Hands, rarity: 5, values: [], mainStat: StatType.Atk },
             { equipmentSlotType: EquipmentSlotType.Body, rarity: 5, values: [] },
             { equipmentSlotType: EquipmentSlotType.Feet, rarity: 5, values: [] },
             { equipmentSlotType: EquipmentSlotType.PlanarSphere, rarity: 5, values: [] },

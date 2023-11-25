@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="header">
+        <div class="font-large bold">
+            Light Cone
+        </div>
+        <button class="round" nz-popover [nzPopoverContent]="lightconeSelectorTemplate"
+            [(nzPopoverVisible)]="selectorIsVisible" nzPopoverPlacement="rightTop" nzPopoverTrigger="click">
+            <span class="material-icons">
+                autorenew
+            </span>
+        </button>
+    </div>
+
+    <ng-container *ngIf="!(lightCone && lightConeInfo)">
+        <img class="placeholder" src="assets/light-cones/placeholder.png" />
+        <div class="font-large font-center">
+            Select a Light Cone
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="lightCone && lightConeInfo">
+        <div class="light-cone-layout">
+            <div class="light-cone-details">
+                <img [src]="'assets/light-cones/' + lightConeInfo.icon" />
+                <div class="self-center-v">
+                    <div>HP: {{lightConeInfo.stats.hp}}</div>
+                    <div>ATK: {{lightConeInfo.stats.atk}}</div>
+                    <div>DEF: {{lightConeInfo.stats.def}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="font-large font-center">
+            {{lightConeInfo.name}}
+        </div>
+        <div class="description">
+            {{lightConeInfo.skill.description}}
+        </div>
+    </ng-container>
+
+    <ng-template #lightconeSelectorTemplate>
+        <div class="popover-container">
+            <light-cone-selector [path]="character?.path" [selected]="lightCone?.id" (selectedChange)="changeLightCone($event)" />
+        </div>
+    </ng-template>

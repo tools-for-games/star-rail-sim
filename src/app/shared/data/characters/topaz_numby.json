@@ -1,6 +1,7 @@
 {
+    "id": "topaz_numby",
     "name": "Topaz & Numby",
-    "path": "Hunt",
+    "path": "the_hunt",
     "element": "Fire",
     "rarity": 5,
     "stats": {

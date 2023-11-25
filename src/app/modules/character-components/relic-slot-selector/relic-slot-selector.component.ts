@@ -2,9 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { EquipmentSlotType } from '@shared/core/equipment-slot-type';
 
 @Component({
-    selector: 'equipment-slot-selector',
-    templateUrl: './equipment-slot-selector.component.html',
-    styleUrls: ['./equipment-slot-selector.component.less']
+    selector: 'relic-slot-selector',
+    templateUrl: './relic-slot-selector.component.html',
+    styleUrls: ['./relic-slot-selector.component.less']
 })
 export class EquipmentSlotSelectorComponent {
     @Input() selected?: EquipmentSlotType;

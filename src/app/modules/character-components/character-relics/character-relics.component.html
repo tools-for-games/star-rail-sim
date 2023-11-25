@@ -1,9 +1,9 @@
 <div class="container">
     <div class="header">
         <div class="font-large bold">
-            Equipments
+            Relics
         </div>
-        <button class="round" nz-popover [nzPopoverContent]="contentTemplate" [(nzPopoverVisible)]="addSetVisible"
+        <button class="round" nz-popover [nzPopoverContent]="relicTemplate" [(nzPopoverVisible)]="addSetVisible"
             nzPopoverPlacement="rightTop" nzPopoverTrigger="click">
             <span class="material-icons">
                 add
@@ -12,7 +12,7 @@
     </div>
 
     <div class="equipment-set-layout">
-        <div *ngFor="let relic of currentBuild?.relics" class="equipment-item bold">
+        <div *ngFor="let relic of currentRelics" class="equipment-item bold">
             <img [src]="'assets/relics/' + relic.icon" [alt]="relic.name">
             <div>
                 <div class="font-thin font-small">
@@ -25,17 +25,17 @@
         </div>
     </div>
     <div>
-        <equipment-slot-selector *ngIf="currentEquipment" [selected]="currentEquipment?.equipmentSlotType"
+        <relic-slot-selector *ngIf="currentEquipment" [selected]="currentEquipment?.equipmentSlotType"
             (selectedChange)="changeEquipmentSlot($event)" />
         <div class="background-highlight">
-            <equipment-builder *ngIf="currentEquipment" [equipmentBuild]="currentEquipment"
+            <relic-builder *ngIf="currentEquipment" [equipmentBuild]="currentEquipment"
                 (equipmentBuildChange)="equipmentBuildChange($event)" />
         </div>
     </div>
 </div>
 
-<ng-template #contentTemplate>
+<ng-template #relicTemplate>
     <div class="popover-container">
-        <relic-set-selector *ngIf="currentBuild" [(selected)]="currentBuild.relics" />
+        <relic-set-selector *ngIf="currentBuild" [selected]="currentBuild.relicIds" (selectedChange)="relicChange($event)"/>
     </div>
 </ng-template>

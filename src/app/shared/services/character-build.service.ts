@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { CharacterInfo } from '../core/character-info';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { CharacterBuild, EquipmentBuildStat } from '../core/builds/character-build';
-import { ALL_CHARACTERS } from '@shared/core/constants';
-import { RelicInfo } from '@shared/core/relic-info';
+import { CharacterBuild, EquipmentBuildStat, LightCone } from '../core/builds/character-build';
+import { CHARACTERS } from '@shared/core/constants/characters';
+import { EquipmentService } from './equipment.service';
+import { LightConeInfo } from '@shared/core/light-cone-info';
 
 const BUILDS_KEY = 'BUILDS_KEY';
 
 @Injectable()
 export class CharacterBuildService {
-    private currentSelected$ = new BehaviorSubject<CharacterBuild | null>(null);
+    private currentBuild$ = new BehaviorSubject<CharacterBuild | null>(null);
     private createdCharacters$ = new BehaviorSubject<CharacterBuild[]>([]);
 
-    constructor() {
+    constructor(private equipmentService: EquipmentService) {
         this.loadBuildsFromLocalStorage();
         this.createdCharacters$.asObservable().subscribe(builds => {
             this.saveBuildsToLocalStorage(builds);
@@ -21,14 +22,19 @@ export class CharacterBuildService {
 
     private updateBuild(build: CharacterBuild) {
         const builds = this.createdCharacters$.value;
-        const current = builds.find(x => x.character.name === build.character.name);
+        const buildToUpdate = builds.find(x => x.characterId === build.characterId);
 
         // replace build
-        if (current) {
-            const index = builds.indexOf(current);
+        if (buildToUpdate) {
+            const index = builds.indexOf(buildToUpdate);
             if (index !== -1) {
                 builds[index] = build;
+
                 this.createdCharacters$.next(builds);
+                // update current if selected
+                if (build.characterId === this.currentBuild$.value?.characterId) {
+                    this.currentBuild$.next(build);
+                }
                 return;
             }
         }
@@ -36,9 +42,6 @@ export class CharacterBuildService {
         // add new
         builds.push(build);
         this.createdCharacters$.next(builds);
-        if (build.character.name === this.currentSelected$.value?.character.name) {
-            this.currentSelected$.next(build);
-        }
     }
 
     private saveBuildsToLocalStorage(values: CharacterBuild[]) {
@@ -49,55 +52,84 @@ export class CharacterBuildService {
     private loadBuildsFromLocalStorage() {
         const stringfiedValue = localStorage.getItem(BUILDS_KEY);
         if (stringfiedValue) {
-            const builds: CharacterBuild[] = JSON.parse(stringfiedValue);
+            let builds: CharacterBuild[] = JSON.parse(stringfiedValue);
             this.createdCharacters$.next(builds);
             if (builds?.length > 0) {
-                this.currentSelected$.next(builds[0])
+                this.currentBuild$.next(builds[0])
             }
         }
     }
 
-    getCharacterBuild(characterName: string) {
-        return this.createdCharacters$.value.find(x => x.character.name == characterName);
+    getCharacterBuildValue(characterId: string) {
+        return this.createdCharacters$.value.find(x => x.characterId == characterId);
     }
 
-    getCurrentSelected(): Observable<CharacterBuild | null> {
-        return this.currentSelected$.asObservable();
+    getCharacterBuild(): Observable<CharacterBuild | null> {
+        return this.currentBuild$.asObservable();
     }
 
-    getCurrentSelectedValue(): CharacterBuild | null {
-        return this.currentSelected$.value;
+    getCurrentCharacter(): CharacterInfo | null {
+        const currentBuild = this.getCurrentBuildValue();
+        const characters = this.getCharacters();
+        return characters.find(x => x.id == currentBuild?.characterId) ?? null;
     }
 
-    setCurrentSelected(characterName: string) {
-        const build = this.getCharacterBuild(characterName);
-        this.currentSelected$.next(build ?? null);
+    getCurrentLightConeValue(): LightConeInfo | null  {
+        const lightCones = this.equipmentService.getLightCones();
+        const build = this.getCurrentBuildValue();
+        if (!build?.lightCone?.id) return null;
+
+        return lightCones.find(x => x.id == build.lightCone?.id) ?? null;
+    }
+
+    getCurrentBuildValue(): CharacterBuild | null {
+        return this.currentBuild$.value;
+    }
+
+    setSelectedCharacterBuild(characterId: string) {
+        const build = this.getCharacterBuildValue(characterId);
+        this.currentBuild$.next(build ?? null);
     }
 
     getCharacters(): CharacterInfo[] {
-        return ALL_CHARACTERS;
+        return CHARACTERS;
     }
 
-    getCreatedCharacters(): Observable<CharacterBuild[]> {
+    getCharacterBuilds(): Observable<CharacterBuild[]> {
         return this.createdCharacters$.asObservable();
+    }
+
+    getCreatedCharacter(): CharacterInfo[] {
+        const builds = this.createdCharacters$.value;
+        const characters = this.getCharacters();
+        return builds.map(b => characters.find(x => x.id == b.characterId) as CharacterInfo);
     }
 
     createCharacter(character: CharacterBuild) {
         const builds = [...this.createdCharacters$.value, character];
         this.createdCharacters$.next(builds);
-        this.currentSelected$.next(character);
+        this.currentBuild$.next(character);
     }
 
-    setRelic(relics: RelicInfo[]) {
-        const build = this.currentSelected$.value;
+    setRelic(relicIds: string[]) {
+        const build = this.currentBuild$.value;
         if (!build) return;
 
-        build.relics = [...relics];
+        build.relicIds = relicIds;
         this.updateBuild(build);
     }
 
+    setLightCone(lightCone: LightCone) {
+        const build = this.currentBuild$.value;
+        if (!build) return;
+
+        build.lightCone = lightCone;
+        this.updateBuild(build);
+
+    }
+
     updateEquipmentBuildStat(value: EquipmentBuildStat) {
-        const build = this.currentSelected$.value;
+        const build = this.currentBuild$.value;
         if (!build) return;
 
         const currentEquipment = build.equipmentStats.find(x => x.equipmentSlotType == value.equipmentSlotType);

@@ -1,6 +1,7 @@
 {
+    "id": "fu_xuan",
     "name": "Fu Xuan",
-    "path": "Preservation",
+    "path": "preservation",
     "element": "Quantum",
     "rarity": 5,
     "stats": {

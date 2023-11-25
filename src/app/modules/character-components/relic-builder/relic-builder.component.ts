@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { EquipmentBuildStat } from '@shared/core/builds/character-build';
-import { STATS } from '@shared/core/constants';
-import { Stat } from '@shared/core/equipment-stat';
+import { STATS } from '@shared/core/constants/stats';
 
 @Component({
-    selector: 'equipment-builder',
-    templateUrl: './equipment-builder.component.html',
-    styleUrls: ['./equipment-builder.component.less']
+    selector: 'relic-builder',
+    templateUrl: './relic-builder.component.html',
+    styleUrls: ['./relic-builder.component.less']
 })
 export class EquipmentBuilderComponent {
     @Input({ required: true })
@@ -25,12 +24,12 @@ export class EquipmentBuilderComponent {
         const currentSelectedStat = this.equipmentBuild.values[index]?.stat;
         const selected = this.equipmentBuild.values.map(v => v.stat);
         return this.subStats
-            .filter(x => !selected.includes(x.name) || currentSelectedStat === x.name)
-            .filter(x => this.equipmentBuild.mainStat !== x.name);
+            .filter(x => !selected.includes(x.id) || currentSelectedStat === x.id)
+            .filter(x => this.equipmentBuild.mainStat !== x.id);
     }
 
     getMainValue() {
-        const currentStat = this.allStats.find(x => x.name === this.equipmentBuild.mainStat);
+        const currentStat = this.allStats.find(x => x.id === this.equipmentBuild.mainStat);
         return currentStat?.mainValue.values.find(x => x.rarity === this.equipmentBuild.rarity)?.value;
     }
 

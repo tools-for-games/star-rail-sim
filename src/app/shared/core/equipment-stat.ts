@@ -1,6 +1,7 @@
 import { EquipmentSlotType } from "./equipment-slot-type";
 
 export interface Stat {
+    id: string;
     name: string;
     icon: string;
     isSubStat: boolean;

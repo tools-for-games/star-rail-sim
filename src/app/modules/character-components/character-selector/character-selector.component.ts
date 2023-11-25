@@ -19,8 +19,8 @@ export class CharacterSelectorComponent implements OnDestroy {
 
     constructor(private characterBuildService: CharacterBuildService) {
         this.characters = this.characterBuildService.getCharacters();
-        const createdCharacterSub = this.characterBuildService.getCreatedCharacters()
-            .subscribe(values => this.createdCharacters = values.map(x => x.character.name));
+        const createdCharacterSub = this.characterBuildService.getCharacterBuilds()
+            .subscribe(values => this.createdCharacters = values.map(x => x.characterId));
         this.subscription.add(createdCharacterSub);
     }
 
@@ -33,7 +33,7 @@ export class CharacterSelectorComponent implements OnDestroy {
     }
 
     selectCharacter(character: CharacterInfo) {
-        this.characterBuildService.createCharacter(new CharacterBuild(character));
+        this.characterBuildService.createCharacter(new CharacterBuild(character.id));
         this.isVisibleChange.emit(false);
     }
 }

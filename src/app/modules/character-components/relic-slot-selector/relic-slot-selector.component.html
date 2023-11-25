@@ -1,0 +1,32 @@
+<div class="container">
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.Head"
+        (click)="select(equipmentSlotType.Head)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/head' + (selected === equipmentSlotType.Head ? '-selected' : '') + '-icon.png'">
+    </button>
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.Hands"
+        (click)="select(equipmentSlotType.Hands)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/hands' + (selected === equipmentSlotType.Hands ? '-selected' : '') + '-icon.png'">
+    </button>
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.Body"
+        (click)="select(equipmentSlotType.Body)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/body' + (selected === equipmentSlotType.Body ? '-selected' : '') + '-icon.png'">
+    </button>
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.Feet"
+        (click)="select(equipmentSlotType.Feet)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/feet' + (selected === equipmentSlotType.Feet ? '-selected' : '') + '-icon.png'">
+    </button>
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.PlanarSphere"
+        (click)="select(equipmentSlotType.PlanarSphere)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/planar-sphere' + (selected === equipmentSlotType.PlanarSphere ? '-selected' : '') + '-icon.png'">
+    </button>
+    <button class="equip-slot" [class.selected]="selected === equipmentSlotType.LinkRope"
+        (click)="select(equipmentSlotType.LinkRope)">
+        <img class="equipment-icon"
+            [src]="'assets/equipment-slots/link-rope' + (selected === equipmentSlotType.LinkRope ? '-selected' : '') + '-icon.png'">
+    </button>
+</div>

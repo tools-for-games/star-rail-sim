@@ -5,6 +5,9 @@
     padding: 1rem;
     display: grid;
     gap: .5em;
+
+    width: 350px;
+    max-width: 350px;
 }
 
 .header {
@@ -13,29 +16,34 @@
     gap: 1rem;
 }
 
-.equipment-set-layout {
-    display: grid;
-    gap: 0.5em;
+.self-center-v {
+    align-self: center;
 }
 
-.equipment-piece-selector {
+.light-cone-layout {
     display: grid;
-    grid-auto-flow: column;
+}
+
+.light-cone-details {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+    grid-template-columns: 140px 1fr;
+}
+
+.placeholder {
+    justify-self: center;
+    width: 200px;
+    transform: rotate(12.8deg);
+    padding: 1rem;
 }
 
 .popover-container {
     display: grid;
     gap: 1rem;
 
-    max-height: 650px;
+    max-height: 700px;
     max-width: 750px;
     overflow-y: scroll;
     padding-right: 1em;
-}
-
-.equipment-item {
-    display: grid;
-    grid-template-columns: 55px auto;
-    align-items: center;
-    gap: 0.5em;
 }

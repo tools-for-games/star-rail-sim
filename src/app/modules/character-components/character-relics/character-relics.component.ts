@@ -1,17 +1,17 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CharacterBuild, EquipmentBuildStat } from '@shared/core/builds/character-build';
 import { EquipmentSlotType } from '@shared/core/equipment-slot-type';
 import { RelicInfo, RelicType } from '@shared/core/relic-info';
 import { CharacterBuildService } from '@shared/services/character-build.service';
-import { RelicService } from '@shared/services/relic.service';
-import { Observable, Subscription } from 'rxjs';
+import { EquipmentService } from '@shared/services/equipment.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'character-equipment',
-    templateUrl: './character-equipment.component.html',
-    styleUrls: ['./character-equipment.component.less']
+    selector: 'character-relics',
+    templateUrl: './character-relics.component.html',
+    styleUrls: ['./character-relics.component.less']
 })
-export class CharacterEquipmentComponent implements OnDestroy {
+export class CharacterRelicsComponent implements OnDestroy {
     subscription = new Subscription();
 
     addSetVisible: boolean = false;
@@ -19,9 +19,16 @@ export class CharacterEquipmentComponent implements OnDestroy {
     relicType = RelicType;
 
     currentEquipment?: EquipmentBuildStat;
+    private allRelics: RelicInfo[] = [];
+    currentRelics: RelicInfo[] = [];
 
-    constructor(private characterBuildService: CharacterBuildService) {
-        const sub = this.characterBuildService.getCurrentSelected()
+    constructor(
+        private characterBuildService: CharacterBuildService,
+        equipmentService: EquipmentService
+    ) {
+        this.allRelics = [...equipmentService.getRelics(), ...equipmentService.getPlanetaryOrnaments()];
+
+        const sub = this.characterBuildService.getCharacterBuild()
             .subscribe((x) => this.buildChange(x));
 
         this.subscription.add(sub);
@@ -29,7 +36,9 @@ export class CharacterEquipmentComponent implements OnDestroy {
 
     buildChange(build: CharacterBuild | null) {
         this.currentBuild = build;
+        if (!build) return;
         this.currentEquipment = build?.equipmentStats.find(x => x.equipmentSlotType == EquipmentSlotType.Head);
+        this.currentRelics = this.allRelics.filter(x => build?.relicIds?.includes(x.id));
     }
 
     ngOnDestroy(): void {
@@ -42,7 +51,7 @@ export class CharacterEquipmentComponent implements OnDestroy {
         if (relic.type === RelicType.PlanetaryOrnamentSet)
             return 2;
         
-        return 4 / this.currentBuild.relics.filter(x => x.type == relic.type).length;
+        return 4 / this.currentRelics.filter(x => x.type == relic.type).length;
     }
 
     changeEquipmentSlot(type: EquipmentSlotType) {
@@ -51,6 +60,9 @@ export class CharacterEquipmentComponent implements OnDestroy {
 
     equipmentBuildChange(value: EquipmentBuildStat) {
         this.characterBuildService.updateEquipmentBuildStat(value);
-        console.log('stats updated');
+    }
+
+    relicChange(relics: any) {
+        this.characterBuildService.setRelic(relics);
     }
 }

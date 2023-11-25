@@ -1,6 +1,7 @@
 {
+    "id": "jing_yuan",
     "name": "Jing Yuan",
-    "path": "Erudition",
+    "path": "erudition",
     "element": "Lightning",
     "rarity": 5,
     "stats": {

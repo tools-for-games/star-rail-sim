@@ -40,8 +40,7 @@
     <div class="stat-layout">
         <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.mainStat"
             (ngModelChange)="mainStatChange($event)">
-            <nz-option *ngFor="let option of getMainStats()" [nzLabel]="option.name"
-                [nzValue]="option.name"></nz-option>
+            <nz-option *ngFor="let option of getMainStats()" [nzLabel]="option.name" [nzValue]="option.id"></nz-option>
         </nz-select>
         <div class="right-align">
             {{getMainValue()}}
@@ -51,28 +50,36 @@
         Sub-stats
     </div>
     <div class="stat-layout">
-        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[0]?.stat" (ngModelChange)="subStatChange(0, $event)">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[0]?.stat"
+            (ngModelChange)="subStatChange(0, $event)">
             <nz-option *ngFor="let option of getAvailableSubStats(0)" [nzLabel]="option.name"
-                [nzValue]="option.name"></nz-option>
+                [nzValue]="option.id"></nz-option>
         </nz-select>
-        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[0]?.value" (ngModelChange)="subStatValueChange(0, $event)"/>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[0]?.value"
+            (ngModelChange)="subStatValueChange(0, $event)" />
 
-        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[1]?.stat" (ngModelChange)="subStatChange(1, $event)">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[1]?.stat"
+            (ngModelChange)="subStatChange(1, $event)">
             <nz-option *ngFor="let option of getAvailableSubStats(1)" [nzLabel]="option.name"
-                [nzValue]="option.name"></nz-option>
+                [nzValue]="option.id"></nz-option>
         </nz-select>
-        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[1]?.value" (ngModelChange)="subStatValueChange(1, $event)"/>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[1]?.value"
+            (ngModelChange)="subStatValueChange(1, $event)" />
 
-        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[2]?.stat" (ngModelChange)="subStatChange(2, $event)">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[2]?.stat"
+            (ngModelChange)="subStatChange(2, $event)">
             <nz-option *ngFor="let option of getAvailableSubStats(2)" [nzLabel]="option.name"
-                [nzValue]="option.name"></nz-option>
+                [nzValue]="option.id"></nz-option>
         </nz-select>
-        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[2]?.value" (ngModelChange)="subStatValueChange(2, $event)"/>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[2]?.value"
+            (ngModelChange)="subStatValueChange(2, $event)" />
 
-        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[3]?.stat" (ngModelChange)="subStatChange(3, $event)">
+        <nz-select nzShowSearch nzPlaceHolder="Select..." [ngModel]="equipmentBuild.values[3]?.stat"
+            (ngModelChange)="subStatChange(3, $event)">
             <nz-option *ngFor="let option of getAvailableSubStats(3)" [nzLabel]="option.name"
-                [nzValue]="option.name"></nz-option>
+                [nzValue]="option.id"></nz-option>
         </nz-select>
-        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[3]?.value" (ngModelChange)="subStatValueChange(3, $event)"/>
+        <input class="right-align" nz-input [value]="0" type="number" [ngModel]="equipmentBuild.values[3]?.value"
+            (ngModelChange)="subStatValueChange(3, $event)" />
     </div>
 </div>

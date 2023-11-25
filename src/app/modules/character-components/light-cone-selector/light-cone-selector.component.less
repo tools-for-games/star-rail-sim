@@ -1,0 +1,57 @@
+@import "../../../styles/_variables.less";
+
+.container {
+    display: grid;
+    gap: 1em;
+}
+
+.light-cones-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.light-cone-layout {
+    display: grid;
+    grid-template-rows: 205px 30px auto;
+    align-items: start;
+    justify-items: center;
+    gap: 0.25em;
+    padding: 0.5em;
+    
+    border: 2px solid transparent;
+    border-radius: @border-radius-default;
+    background-color: @color-background-highlight;
+    cursor: pointer;
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    .name {
+        overflow: hidden;
+    }
+
+    &.selected {
+        border: 2px solid @primary-color;
+    }
+
+    &.disabled:not(.selected) {
+        filter: grayscale(100%);
+        cursor: unset;
+    }
+
+    &:not(.disabled):hover,
+    &:not(.disabled):focus {
+        filter: brightness(1.2);
+        background-color: @color-background-highlight-2x;
+    }
+}
+
+.rarity-container {
+    display: flex;
+    justify-content: center;
+    margin-top: .2rem;
+    color: @primary-color
+}

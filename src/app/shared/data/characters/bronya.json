@@ -1,6 +1,7 @@
 {
+    "id": "bronya",
     "name": "Bronya",
-    "path": " Harmony",
+    "path": "harmony",
     "element": "Wind ",
     "rarity": 5,
     "stats": {

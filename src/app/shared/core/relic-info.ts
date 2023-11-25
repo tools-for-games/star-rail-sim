@@ -4,6 +4,7 @@ export enum RelicType {
 }
 
 export interface RelicInfo {
+    id: string,
     name: string;
     type: RelicType;
     effect: string[];

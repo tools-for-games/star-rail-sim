@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="font-large bold">
+        Light Cones
+    </div>
+    <div class="light-cones-container">
+        <ng-container *ngFor="let lightCone of allLightCones">
+            <div class="light-cone-layout" (click)="clickLightCone(lightCone.id)"
+                [class.selected]="lightCone.id == selected">
+                <img [src]="'assets/light-cones/' + lightCone.icon" />
+                <div class="rarity-container">
+                    <span *ngFor="let _ of [].constructor(lightCone.rarity)" class="material-icons">
+                        grade
+                    </span>
+                </div>
+                <div class="name bold font-center">{{lightCone.name}}</div>
+            </div>
+        </ng-container>
+    </div>
+</div>

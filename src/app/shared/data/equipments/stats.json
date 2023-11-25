@@ -1,5 +1,6 @@
 [
     {
+        "id": "hp",
         "name": "HP",
         "icon": "Icon_HP.webp",
         "isSubStat": true,
@@ -24,6 +25,7 @@
         }
     },
     {
+        "id": "atk",
         "name": "ATK",
         "icon": "Icon_ATK.webp",
         "isSubStat": true,
@@ -48,6 +50,7 @@
         }
     },
     {
+        "id": "hp_rate",
         "name": "HP Rate",
         "icon": "Icon_HP.webp",
         "isSubStat": true,
@@ -75,6 +78,7 @@
         }
     },
     {
+        "id": "atk_rate",
         "name": "ATK Rate",
         "icon": "Icon_ATK.webp",
         "isSubStat": true,
@@ -102,6 +106,7 @@
         }
     },
     {
+        "id": "def_rate",
         "name": "DEF Rate",
         "icon": "Icon_DEF.webp",
         "isSubStat": true,
@@ -129,6 +134,7 @@
         }
     },
     {
+        "id": "crit_rate",
         "name": "Crit Rate",
         "icon": "Icon_CRIT_Rate.webp",
         "isSubStat": true,
@@ -153,6 +159,7 @@
         }
     },
     {
+        "id": "crit_dmg",
         "name": "Crit DMG",
         "icon": "Icon_CRIT_DMG.webp",
         "isSubStat": true,
@@ -177,6 +184,7 @@
         }
     },
     {
+        "id": "outgoing_healing",
         "name": "Outgoing Healing",
         "icon": "Icon_Outgoing_Healing_Boost.webp",
         "isSubStat": false,
@@ -201,6 +209,7 @@
         }
     },
     {
+        "id": "effect_hit_rate",
         "name": "Effect Hit Rate",
         "icon": "Icon_Effect_Hit_Rate.webp",
         "isSubStat": true,
@@ -225,7 +234,8 @@
         }
     },
     {
-        "name": "Speed",
+        "id": "spd",
+        "name": "SPD",
         "icon": "Icon_SPD.webp",
         "isSubStat": true,
         "mainValue": {
@@ -249,6 +259,7 @@
         }
     },
     {
+        "id": "break_effect",
         "name": "Break Effect",
         "icon": "Icon_Break_Effect.webp",
         "isSubStat": true,
@@ -273,6 +284,27 @@
         }
     },
     {
+        "id": "effect_res",
+        "name": "Effect RES",
+        "icon": "Icon_Effect_RES.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [],
+            "values": []
+        }
+    },
+    {
+        "id": "def",
+        "name": "DEF",
+        "icon": "Icon_DEF.webp",
+        "isSubStat": true,
+        "mainValue": {
+            "slotTypes": [],
+            "values": []
+        }
+    },
+    {
+        "id": "energy_regeneration_rate",
         "name": "Energy Regeneration Rate",
         "icon": "Icon_Energy_Regeneration_Rate.webp",
         "isSubStat": false,
@@ -297,6 +329,7 @@
         }
     },
     {
+        "id": "fire_dmg",
         "name": "Fire DMG",
         "icon": "Icon_Fire_DMG_Boost.webp",
         "isSubStat": false,
@@ -321,6 +354,7 @@
         }
     },
     {
+        "id": "quantum_dmg",
         "name": "Quantum DMG",
         "icon": "Icon_PhyQuantum_DMG_Boost.webp",
         "isSubStat": false,
@@ -345,6 +379,7 @@
         }
     },
     {
+        "id": "ice_dmg",
         "name": "Ice DMG",
         "icon": "IconIce_DMG_Boost.webp",
         "isSubStat": false,
@@ -369,6 +404,7 @@
         }
     },
     {
+        "id": "physical_dmg",
         "name": "Physical DMG",
         "icon": "Icon_PhysPhysical_DMG_Boost.webp",
         "isSubStat": false,
@@ -393,6 +429,7 @@
         }
     },
     {
+        "id": "imaginary_dmg",
         "name": "Imaginary DMG",
         "icon": "Icon_PhysiImaginary_DMG_Boost.webp",
         "isSubStat": false,
@@ -417,6 +454,7 @@
         }
     },
     {
+        "id": "lightning_dmg",
         "name": "Lightning DMG",
         "icon": "Icon_PhysiLightning_DMG_Boost.webp",
         "isSubStat": false,
@@ -441,6 +479,7 @@
         }
     },
     {
+        "id": "wind_dmg",
         "name": "Wind DMG",
         "icon": "Icon_Wind_DMG_Boost.webp",
         "isSubStat": false,

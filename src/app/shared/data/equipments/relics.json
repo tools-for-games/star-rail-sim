@@ -1,5 +1,6 @@
 [
     {
+        "id": "band_of_sizzling_thunder",
         "icon": "band_of_sizzling_thunder.webp",
         "name": "Band of Sizzling Thunder",
         "type": "RelicSet",
@@ -9,6 +10,7 @@
         ]
     },
     {
+        "id": "champion_of_streetwise_boxing",
         "icon": "champion_of_streetwise_boxing.webp",
         "name": "Champion of Streetwise Boxing",
         "type": "RelicSet",
@@ -18,6 +20,7 @@
         ]
     },
     {
+        "id": "eagle_of_twilight_line",
         "icon": "eagle_of_twilight_line.webp",
         "name": "Eagle of Twilight Line",
         "type": "RelicSet",
@@ -27,6 +30,7 @@
         ]
     },
     {
+        "id": "firesmith_of_lava",
         "icon": "firesmith_of_lava.webp",
         "name": "Firesmith of Lava-Forging",
         "type": "RelicSet",
@@ -36,6 +40,7 @@
         ]
     },
     {
+        "id": "genius_of_brilliant_stars",
         "icon": "genius_of_brilliant_stars.webp",
         "name": "Genius of Brilliant Stars",
         "type": "RelicSet",
@@ -45,6 +50,7 @@
         ]
     },
     {
+        "id": "guard_of_wuthering_snow",
         "icon": "guard_of_wuthering_snow.webp",
         "name": "Guard of Wuthering Snow",
         "type": "RelicSet",
@@ -54,6 +60,7 @@
         ]
     },
     {
+        "id": "hunter_of_glacial_forest",
         "icon": "hunter_of_glacial_forest.webp",
         "name": "Hunter of Glacial Forest",
         "type": "RelicSet",
@@ -63,6 +70,7 @@
         ]
     },
     {
+        "id": "knight_of_purity_palace",
         "icon": "knight_of_purity_palace.webp",
         "name": "Knight of Purity Palace",
         "type": "RelicSet",
@@ -72,6 +80,7 @@
         ]
     },
     {
+        "id": "longevous_disciple",
         "icon": "longevous_disciple.webp",
         "name": "Longevous Disciple",
         "type": "RelicSet",
@@ -81,6 +90,7 @@
         ]
     },
     {
+        "id": "messenger_traversing_hackerspace",
         "icon": "messenger_traversing_hackerspace.webp",
         "name": "Messenger Traversing Hackerspace",
         "type": "RelicSet",
@@ -90,6 +100,7 @@
         ]
     },
     {
+        "id": "musketeer_of_wild_wheat",
         "icon": "musketeer_of_wild_wheat.webp",
         "name": "Musketeer of Wild Wheat",
         "type": "RelicSet",
@@ -99,6 +110,7 @@
         ]
     },
     {
+        "id": "passerby_of_wandering_cloud",
         "icon": "passerby_of_wandering_cloud.webp",
         "name": "Passerby of Wandering Cloud",
         "type": "RelicSet",
@@ -108,6 +120,7 @@
         ]
     },
     {
+        "id": "prisoner_in_deep_confinement",
         "icon": "prisoner_in_deep_confinement.webp",
         "name": "Prisoner in Deep Confinement",
         "type": "RelicSet",
@@ -117,6 +130,7 @@
         ]
     },
     {
+        "id": "the_ashblazing_grand_duke",
         "icon": "the_ashblazing_grand_duke.webp",
         "name": "The Ashblazing Grand Duke",
         "type": "RelicSet",
@@ -126,6 +140,7 @@
         ]
     },
     {
+        "id": "thief_of_shooting_meteor",
         "icon": "thief_of_shooting_meteor.webp",
         "name": "Thief of Shooting Meteor",
         "type": "RelicSet",
@@ -135,6 +150,7 @@
         ]
     },
     {
+        "id": "wastelander_of_banditry_desert",
         "icon": "wastelander_of_banditry_desert.webp",
         "name": "Wastelander of Banditry Desert",
         "type": "RelicSet",

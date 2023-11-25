@@ -1,0 +1,222 @@
+[
+    {
+        "id": "worrisome-blissful",
+        "icon": "worrisome-blissful.png",
+        "name": "Worrisome, Blissful",
+        "rarity": 5,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 582,
+            "def": 463,
+            "hp": 1058
+        },
+        "skill": {
+            "description": "Increase the wearer's CRIT Rate by {0}% and their follow-up attacks' DMG by {1}%. After the wearer uses a follow-up attack, apply the Tame state to the target, stacking up to 2 stacks. When allies hit enemy targets under the Tame state, every Tame stack increases the CRIT DMG dealt by {2}%.",
+            "values": [
+                [18,30,12],
+                [21,35,14],
+                [24,40,16],
+                [27,45,18],
+                [30,50,20]
+            ]
+        }
+    },
+    {
+        "id": "cruising_in_the_stellar_sea",
+        "icon": "cruising-in-the-stellar-sea.png",
+        "name": "Cruising in the Stellar Sea",
+        "rarity": 5,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 529,
+            "def": 463,
+            "hp": 953
+        },
+        "skill": {
+            "description": "Increases the wearer's CRIT rate by {0}%, and increases their CRIT rate against enemies with HP less than or equal to 50% by an extra {1}%. When the wearer defeats an enemy, their ATK is increased by {2}% for 2 turn(s).",
+            "values": [
+                [8,8,20],
+                [10,10,25],
+                [12,12,30],
+                [14,14,35],
+                [16,16,40]
+            ]
+        }
+    },
+    {
+        "id": "adversarial",
+        "icon": "adversarial.png",
+        "name": "Adversarial",
+        "rarity": 3,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 370,
+            "def": 264,
+            "hp": 741
+        },
+        "skill": {
+            "description": "When the wearer defeats an enemy, increases SPD by {0}% for 2 turn(s).",
+            "values": [
+                [10],
+                [12],
+                [14],
+                [16],
+                [18]
+            ]
+        }
+    },
+    {
+        "id": "swordplay",
+        "icon": "swordplay.png",
+        "name": "Swordplay",
+        "rarity": 4,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 476,
+            "def": 330,
+            "hp": 953
+        },
+        "skill": {
+            "description": "For each time the wearer hits the same target, DMG dealt increases by {0}%, stacking up to 5 time(s). This effect will be dispelled when the wearer changes targets.",
+            "values": [
+                [8],
+                [10],
+                [12],
+                [14],
+                [16]
+            ]
+        }
+    },
+    {
+        "id": "arrows",
+        "icon": "arrows.png",
+        "name": "Arrows",
+        "rarity": 3,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 317,
+            "def": 264,
+            "hp": 847
+        },
+        "skill": {
+            "description": "At the start of the battle, the wearer's CRIT Rate increases by {0}% for 3 turn(s).",
+            "values": [
+                [12],
+                [15],
+                [18],
+                [21],
+                [24]
+            ]
+        }
+    },
+    {
+        "id": "darting-arrow",
+        "icon": "darting-arrow.png",
+        "name": "Darting Arrow",
+        "rarity": 3,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 370,
+            "def": 264,
+            "hp": 741
+        },
+        "skill": {
+            "description": "When the wearer defeats an enemy, increases ATK by {0}% for 3 turn(s).",
+            "values": [
+                [24],
+                [30],
+                [36],
+                [42],
+                [48]
+            ]
+        }
+    },
+    {
+        "id": "return-to-darkness",
+        "icon": "return-to-darkness.png",
+        "name": "Return to Darkness",
+        "rarity": 4,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 529,
+            "def": 330,
+            "hp": 847
+        },
+        "skill": {
+            "description": "Increases the wearer's CRIT Rate by {0}%. After a CRIT Hit, there is a {1}% fixed chance to dispel 1 buff on the target enemy. This effect can only trigger 1 time per attack.",
+            "values": [
+                [12, 16],
+                [15, 20],
+                [18, 24],
+                [21, 28],
+                [24, 32]
+            ]
+        }
+    },
+    {
+        "id": "only-silence-remains",
+        "icon": "only-silence-remains.png",
+        "name": "Only Silence Remains",
+        "rarity": 4,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 476,
+            "def": 330,
+            "hp": 953
+        },
+        "skill": {
+            "description": "Increases the wearer's ATK by {0}%. If there are 2 or fewer enemies on the field, increases wearer's CRIT Rate by {1}%.",
+            "values": [
+                [16, 12],
+                [20, 15],
+                [24, 18],
+                [28, 21],
+                [32, 24]
+            ]
+        }
+    },
+    {
+        "id": "subscribe-for-more",
+        "icon": "subscribe-for-more.png",
+        "name": "Subscribe for More!",
+        "rarity": 4,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 476,
+            "def": 330,
+            "hp": 953
+        },
+        "skill": {
+            "description": "Increases the DMG of the wearer's Basic ATK and Skill by {0}%. This effect increases by an extra {1}% when the wearer's current Energy reaches its max level.",
+            "values": [
+                [24, 24],
+                [30, 30],
+                [36, 36],
+                [42, 42],
+                [48, 48]
+            ]
+        }
+    },
+    {
+        "id": "river-flows-in-spring",
+        "icon": "river-flows-in-spring.png",
+        "name": "River Flows in Spring",
+        "rarity": 4,
+        "path": "the_hunt",
+        "stats": {
+            "atk": 476,
+            "def": 396,
+            "hp": 847
+        },
+        "skill": {
+            "description": "After entering battle, increases the wearer's SPD by {0}% and DMG by {1}%. When the wearer takes DMG, this effect will disappear. This effect will resume after the end of the wearer's next turn.",
+            "values": [
+                [8, 12],
+                [9, 15],
+                [10, 18],
+                [11, 21],
+                [12, 24]
+            ]
+        }
+    }
+]
